@@ -1,0 +1,841 @@
+@import 'tailwindcss';
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * IDENTIDADE APEX — tudo aqui foi MEDIDO, não escolhido.
+ *
+ * Fontes:  manual de marca p.30 + `feedback_fontes_proibidas.md`
+ *          Poppins = título/label/nav · Raleway = corpo · DM Sans = TODO número.
+ *          ⛔ NENHUM monospace. JetBrains Mono é a fonte que o Gui rejeita
+ *             ("cara de IA"); foi eliminada do BI (21 ocorrências) e do OS (13) em 09/06.
+ *          ⛔ Nenhuma fonte de sistema como família primária — "salta aos olhos".
+ *             Elas entram só como fallback, atrás das três da casa.
+ *
+ * Cores:   manual p.20, "Paleta de Cor Oficial da Apex" — cinco slots, A a E.
+ *          Verde/vermelho/âmbar NÃO estão no manual: são semântica de produto,
+ *          e por decisão do Gui (08/08) vivem SÓ em pill/tag, nunca em texto corrido.
+ *
+ * Degradê: manual p.21, bloco "GRADIENTE | DEGRADÊ", combinação C+D marcada "+ usado".
+ *          #1A6581 → #000000. A sidebar do BI e a do Papi são execuções dele.
+ *
+ * Glass:   decisão travada — glass forte SÓ no escuro. O claro é sólido; o Gui
+ *          rejeitou glass translúcido no claro duas vezes ("fica lavado").
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+@theme {
+  /* ── A paleta oficial (manual p.20) ─────────────────────────────────────── */
+  --color-ciano: #00e0f6; /* A */
+  --color-tinta: #212121; /* B */
+  --color-petrol: #1a6581; /* C */
+  --color-preto: #000000; /* D */
+  /* E = #FFFFFF */
+
+  /* Derivadas do BI (não estão no manual, mas são a linguagem dos três painéis) */
+  --color-petrol-esc: #0f4a5e;
+  --color-petrol-cla: #2589a8;
+
+  /* ── Semântica: só em pill/tag. Nunca em texto corrido. ─────────────────── */
+  --color-ok: #1b8c5a;
+  --color-alerta: #e68a00;
+  --color-erro: #c0392b;
+
+  /* ── Tipografia ─────────────────────────────────────────────────────────── */
+  --font-titulo: var(--fonte-poppins), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-sans: var(--fonte-raleway), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-num: var(--fonte-dmsans), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* ── Superfícies e texto: apontam para os tokens de TEMA (definidos em :root
+   *    logo abaixo), e é isso que faz `text-tx2`, `border-borda` e companhia
+   *    respeitarem claro e escuro sem uma linha a mais em cada tela. */
+  --color-fundo: var(--fundo);
+  --color-sup: var(--sup);
+  --color-borda: var(--brd);
+  --color-neutro: var(--sup2);
+  --color-destaque: var(--sup-h);
+  --color-tx: var(--tx);
+  --color-tx2: var(--tx2);
+  --color-tx3: var(--tx3);
+
+  /* ── Raio: três degraus, medidos por frequência no BI ───────────────────── */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * TOKENS DE TEMA — o claro é sólido, o escuro é vidro.
+ * Definidos em :root puro (nunca só dentro de @media), como manda a casa.
+ * ═══════════════════════════════════════════════════════════════════════════ */
+:root {
+  color-scheme: light;
+
+  --sup: #ffffff;
+  --sup2: #fafcfd;
+  --sup-h: #f0fcfe;
+  --fundo: #f5f7f8;
+  --brd: #dee4e7;
+  --brd-forte: #cdd8dd;
+  --tx: #1b2a33;
+  --tx2: #4a6572;
+  --tx3: #8a9ba5;
+
+  /* No claro NÃO há blur: decisão travada. */
+  --blur: none;
+  /* Sombra tingida de petrol, nunca cinza neutro — detalhe medido do BI. */
+  --sh: 0 1px 2px rgba(16, 74, 94, 0.04), 0 2px 8px rgba(16, 74, 94, 0.03);
+  --sh-h: 0 6px 18px rgba(16, 74, 94, 0.12), 0 0 16px rgba(0, 224, 246, 0.1);
+  --sh-forte: 0 10px 30px rgba(16, 74, 94, 0.1);
+
+  --linha: rgba(26, 101, 129, 0.1);
+  --trilho: #eef3f5;
+}
+
+:root[data-tema='escuro'] {
+  color-scheme: dark;
+
+  /* O glass da casa: string idêntica em 5 abas do BI. Aqui vira UM token. */
+  --sup: linear-gradient(160deg, rgba(36, 52, 64, 0.7), rgba(15, 25, 33, 0.76));
+  --sup2: rgba(255, 255, 255, 0.05);
+  --sup-h: rgba(0, 224, 246, 0.1);
+  --fundo: #10171c;
+  --brd: rgba(0, 224, 246, 0.2);
+  --brd-forte: rgba(0, 224, 246, 0.32);
+  --tx: #e8edef;
+  --tx2: #a6bac4;
+  --tx3: #7e919c;
+
+  --blur: blur(16px) saturate(1.2);
+  /* A tríade: contato + elevação + a linha de luz no topo (é ela que dá o vidro). */
+  --sh: 0 1px 2px rgba(0, 0, 0, 0.32), 0 10px 26px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  --sh-h: 0 12px 32px rgba(0, 0, 0, 0.42), 0 0 22px rgba(0, 224, 246, 0.18);
+  --sh-forte: 0 30px 70px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  --linha: rgba(255, 255, 255, 0.08);
+  --trilho: rgba(255, 255, 255, 0.07);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * BASE
+ * ═══════════════════════════════════════════════════════════════════════════ */
+html {
+  background: var(--fundo);
+}
+
+body {
+  background: var(--fundo);
+  color: var(--tx);
+  font-family: var(--font-sans);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* No escuro, o fundo ganha o halo ciano do degradê da marca — sutil, fixo. */
+:root[data-tema='escuro'] body {
+  background:
+    radial-gradient(900px 520px at 12% -8%, rgba(0, 224, 246, 0.07), transparent 62%),
+    radial-gradient(700px 460px at 92% 4%, rgba(26, 101, 129, 0.16), transparent 66%), #10171c;
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+th,
+label,
+button {
+  font-family: var(--font-titulo);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * NÚMERO — DM Sans + tabular. Sempre o PAR das duas propriedades.
+ * Sem isto os dígitos "dançam" quando o valor muda (contador, prazo, relógio).
+ * ═══════════════════════════════════════════════════════════════════════════ */
+.num {
+  font-family: var(--font-num);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}
+
+/* Número grande: o letter-spacing negativo é o que tira o "look de planilha". */
+.num-g {
+  font-family: var(--font-num);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+  letter-spacing: -0.5px;
+  font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * CARD — a anatomia da casa: LABEL → VALOR → RODAPÉ
+ * ═══════════════════════════════════════════════════════════════════════════ */
+.card {
+  background: var(--sup);
+  border: 1px solid var(--brd);
+  border-radius: var(--radius-md);
+  box-shadow: var(--sh);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  transition: box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+}
+
+.card-i:hover {
+  transform: translateY(-1px); /* UM pixel. Nunca mais que isso. */
+  box-shadow: var(--sh-h);
+  border-color: var(--brd-forte);
+}
+
+.rotulo {
+  font-family: var(--font-titulo);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--tx3);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * SIDEBAR — 232px aberta, 64px recolhida. Fundo = o degradê C+D do manual.
+ * ═══════════════════════════════════════════════════════════════════════════ */
+.side {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 232px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 14px;
+  gap: 3px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: linear-gradient(168deg, #1a6581 0%, #0e3a4a 40%, #08171d 100%);
+  border-right: 1px solid rgba(0, 224, 246, 0.14);
+  box-shadow: 2px 0 24px rgba(8, 23, 29, 0.18);
+  transition: width 0.18s ease;
+}
+
+/* O glow radial no canto — presente no BI e no Papi. */
+.side::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(0, 224, 246, 0.13), transparent 68%);
+  pointer-events: none;
+}
+
+.side-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 9px;
+  border-left: 3px solid transparent;
+  font-family: var(--font-titulo);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: rgba(232, 237, 239, 0.72);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.side-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.side-item[data-ativo='sim'] {
+  background: rgba(0, 224, 246, 0.15);
+  border-left-color: #00e0f6;
+  color: #fff;
+  font-weight: 600;
+}
+
+.side-grupo {
+  font-family: var(--font-titulo);
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  color: rgba(0, 224, 246, 0.55);
+  padding: 14px 10px 5px;
+  white-space: nowrap;
+}
+
+.side-icone {
+  width: 26px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 21px;
+  line-height: 1;
+}
+
+/* Recolhida: vira trilho de ícones. */
+.side[data-recolhida='sim'] {
+  width: 64px;
+  padding: 18px 8px;
+}
+.side[data-recolhida='sim'] .side-texto,
+.side[data-recolhida='sim'] .side-grupo,
+.side[data-recolhida='sim'] .side-badge {
+  display: none;
+}
+.side[data-recolhida='sim'] .side-item {
+  justify-content: center;
+  padding: 9px 4px;
+}
+
+@media print {
+  .side {
+    display: none !important;
+  }
+  .conteudo {
+    margin-left: 0 !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * PILL / TAG — fundo = cor semântica em alpha .12–.15, texto = cor cheia.
+ * Nunca fundo sólido, nunca texto branco sobre cor.
+ * ═══════════════════════════════════════════════════════════════════════════ */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-titulo);
+  font-size: 9.5px;
+  font-weight: 600;
+  padding: 2.5px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+}
+
+.pill-pos {
+  background: rgba(27, 140, 90, 0.13);
+  color: var(--color-ok, #1b8c5a);
+}
+.pill-neg {
+  background: rgba(192, 57, 43, 0.13);
+  color: var(--color-erro, #c0392b);
+}
+.pill-avi {
+  background: rgba(230, 138, 0, 0.14);
+  color: var(--color-alerta, #e68a00);
+}
+.pill-ok {
+  background: rgba(0, 224, 246, 0.15);
+  color: var(--color-petrol-esc, #0f4a5e);
+}
+.pill-neu {
+  background: var(--sup2);
+  color: var(--tx2);
+  border: 1px solid var(--brd);
+}
+
+:root[data-tema='escuro'] .pill-pos {
+  background: rgba(46, 204, 138, 0.16);
+  color: #2ecc8a;
+}
+:root[data-tema='escuro'] .pill-neg {
+  background: rgba(232, 80, 80, 0.16);
+  color: #e85050;
+}
+:root[data-tema='escuro'] .pill-avi {
+  background: rgba(255, 176, 32, 0.16);
+  color: #ffb020;
+}
+:root[data-tema='escuro'] .pill-ok {
+  background: rgba(0, 224, 246, 0.16);
+  color: #00e0f6;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * CHIP — categoria pela BORDA ESQUERDA, card neutro. É como a casa marca
+ * matéria sem tingir o cartão inteiro.
+ * ═══════════════════════════════════════════════════════════════════════════ */
+.chip-mat {
+  border-left: 3px solid var(--cor-mat, var(--color-petrol));
+}
+
+/* Cor por matéria — petrol e derivadas, não arco-íris. */
+.mat-marca {
+  --cor-mat: #1a6581;
+}
+.mat-patente {
+  --cor-mat: #2589a8;
+}
+.mat-modelo {
+  --cor-mat: #4aa8c4;
+}
+.mat-desenho {
+  --cor-mat: #00e0f6;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * BANDEIRA — proporção 4:3 + ring de 1px. O ring é o que impede a bandeira
+ * branca (Japão) de sumir no fundo.
+ * ═══════════════════════════════════════════════════════════════════════════ */
+.fi {
+  display: inline-block;
+  width: 18px;
+  height: 13.5px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+:root[data-tema='escuro'] .fi {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14), 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.fi-g {
+  width: 24px;
+  height: 18px;
+}
+
+/* Fallback nomeado: portfólio de PI tem ativo sem país. */
+.fi-vazio {
+  background: var(--trilho);
+  color: var(--tx3);
+  font-family: var(--font-num);
+  font-size: 7px;
+  text-align: center;
+  line-height: 13.5px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * SEÇÃO / NOTA / SEGMENTED — copiados da gramática do BI
+ * ═══════════════════════════════════════════════════════════════════════════ */
+.sec {
+  font-family: var(--font-titulo);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--tx);
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--color-ciano);
+  display: inline-block;
+  /*
+   * O sublinhado ciano tem a largura do TEXTO, não a do cartão — é assim no BI e é o que
+   * marca hierarquia sem virar régua. Dentro de um contêiner `flex-col`, porém, o padrão
+   * `align-items: stretch` estica o inline-block de ponta a ponta e a linha atravessa o
+   * cartão inteiro. `align-self: start` devolve a largura do conteúdo em qualquer contexto.
+   */
+  align-self: flex-start;
+}
+
+.nota {
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--tx2);
+  padding: 9px 13px;
+  background: var(--sup-h);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--color-ciano);
+}
+:root[data-tema='escuro'] .nota {
+  background: rgba(0, 224, 246, 0.05);
+}
+
+.seg {
+  display: inline-flex;
+  background: var(--sup2);
+  border: 1px solid var(--brd);
+  border-radius: 9px;
+  padding: 3px;
+  gap: 2px;
+}
+.seg button {
+  font-family: var(--font-titulo);
+  font-size: 11.5px;
+  font-weight: 500;
+  border: 0;
+  background: transparent;
+  color: var(--tx2);
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.16s;
+}
+.seg button:hover {
+  color: var(--tx);
+}
+.seg button[data-on='sim'] {
+  background: linear-gradient(180deg, var(--color-petrol-cla), var(--color-petrol));
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(26, 101, 129, 0.4);
+}
+
+/* Barra de proporção: cor ÚNICA com opacidade, nunca escala multicolor. */
+.barra {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--trilho);
+  overflow: hidden;
+}
+.barra > i {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--color-petrol), var(--color-ciano));
+}
+
+/* Tabela */
+table.tb {
+  width: 100%;
+  /* separate (com espaçamento 0), e não collapse: no collapse o navegador ignora o
+     border-radius das células, e o cabeçalho não arredondaria. */
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 12px;
+}
+table.tb th {
+  background: var(--color-petrol);
+  color: #fff;
+  /* Mesma altura de uma linha do corpo (~34px): o texto é menor, o respiro é maior. */
+  padding: 11px 10px;
+  text-align: left;
+  vertical-align: middle;
+  font-family: var(--font-titulo);
+  font-weight: 500;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+/* Pontas arredondadas só nos cantos de fora do cabeçalho. */
+table.tb thead tr:first-child th:first-child {
+  border-top-left-radius: 8px;
+}
+table.tb thead tr:first-child th:last-child {
+  border-top-right-radius: 8px;
+}
+:root[data-tema='escuro'] table.tb th {
+  background: #0f2e3e;
+}
+table.tb td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--linha);
+  font-size: 12px;
+  vertical-align: top;
+}
+/* Variação: tudo da linha centralizado na vertical (linhas com botões, selos e textos de
+   duas linhas, onde o alinhamento pelo topo deixa os elementos desencontrados). */
+table.tb.tb-meio td {
+  vertical-align: middle;
+}
+table.tb tbody tr:hover td {
+  background: var(--sup-h);
+}
+
+/* Scrollbar discreta no escuro */
+:root[data-tema='escuro'] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+:root[data-tema='escuro'] ::-webkit-scrollbar-thumb {
+  background: rgba(0, 224, 246, 0.18);
+  border-radius: 5px;
+}
+:root[data-tema='escuro'] ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Rolagem da sidebar: ela é escura nos DOIS temas, então a barra nativa do tema claro (branca e
+   larga) destoava. Fina, translúcida em ciano e sem trilho — só aparece forte no hover. */
+.side {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 224, 246, 0.22) transparent;
+}
+.side:hover {
+  scrollbar-color: rgba(0, 224, 246, 0.4) transparent;
+}
+.side::-webkit-scrollbar {
+  width: 6px;
+}
+.side::-webkit-scrollbar-track {
+  background: transparent;
+}
+.side::-webkit-scrollbar-thumb {
+  background: rgba(0, 224, 246, 0.22);
+  border-radius: 999px;
+}
+.side:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 224, 246, 0.4);
+}
+
+/* Balão do menu recolhido (ver DicaMenu em Casca.tsx): o mesmo degradê escuro da sidebar,
+   borda ciano e uma seta apontando para o ícone. Entra deslizando da esquerda. */
+.dica-menu {
+  transform: translateY(-50%);
+  white-space: nowrap;
+  padding: 7px 12px;
+  border-radius: 9px;
+  background: linear-gradient(160deg, #1a6581, #0e3a4a);
+  border: 1px solid rgba(0, 224, 246, 0.32);
+  box-shadow: 0 8px 24px rgba(8, 23, 29, 0.35), 0 0 14px rgba(0, 224, 246, 0.12);
+  animation: dica-entra 0.16s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.dica-menu-seta {
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  transform: translateY(-50%) rotate(45deg);
+  background: #175a72;
+  border-left: 1px solid rgba(0, 224, 246, 0.32);
+  border-bottom: 1px solid rgba(0, 224, 246, 0.32);
+}
+@keyframes dica-entra {
+  from {
+    opacity: 0;
+    transform: translate(-6px, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dica-menu {
+    animation: none;
+  }
+}
+
+/* Hover de TODO botão habilitado: um contorno fino em ciano, para o botão "dar sinal de vida"
+   mesmo quando o componente não definiu hover próprio. É outline (não border): não muda o
+   tamanho, não briga com a sombra inline dos botões em degradê e segue o arredondamento.
+   Ficam de fora os itens da sidebar (já têm o próprio realce de fundo) e o olho dos campos de
+   senha (que mora dentro do campo: o contorno desenharia uma caixa no meio dele). */
+button:not(:disabled):not(.side-item):not(.olho-senha) {
+  transition-property: color, background-color, border-color, outline-color, box-shadow, opacity, transform;
+  transition-duration: 0.15s;
+  outline: 1px solid transparent;
+  outline-offset: 1px;
+}
+button:not(:disabled):not(.side-item):not(.olho-senha):hover {
+  outline-color: rgba(0, 224, 246, 0.6);
+}
+/* O foco do teclado continua mais forte que o hover (a regra acima não pode apagá-lo). */
+button:not(:disabled):focus-visible {
+  outline: 2px solid var(--color-ciano);
+  outline-offset: 2px;
+}
+
+/* Toasts (ver componentes/Toast.tsx): entram deslizando da direita, saem para a direita, e
+   uma barra fina no rodapé mostra quanto tempo falta para sumirem. */
+.toast {
+  position: relative;
+  overflow: hidden;
+  animation: toast-entra 0.26s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.toast-sai {
+  animation: toast-sai 0.22s ease-in forwards;
+}
+.toast-barra {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  opacity: 0.55;
+  transform-origin: left;
+  animation-name: toast-tempo;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes toast-entra {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes toast-sai {
+  to {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+}
+@keyframes toast-tempo {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .toast,
+  .toast-sai {
+    animation: none;
+  }
+}
+
+/* Esqueletos (componentes/Esqueleto.tsx): o bloco com um brilho que atravessa da esquerda para a
+   direita. Nos dois temas o brilho é a cor do trilho clareada — sutil, sem piscar. */
+.osso {
+  background: linear-gradient(90deg, var(--trilho) 0%, var(--osso-brilho) 50%, var(--trilho) 100%);
+  background-size: 220% 100%;
+  animation: osso-brilho 1.35s ease-in-out infinite;
+}
+:root {
+  --osso-brilho: #f6f9fa;
+}
+:root[data-tema='escuro'] {
+  --osso-brilho: rgba(255, 255, 255, 0.13);
+}
+@keyframes osso-brilho {
+  from {
+    background-position: 120% 0;
+  }
+  to {
+    background-position: -120% 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .osso {
+    animation: none;
+  }
+}
+
+/* Foco visível — acessibilidade, não decoração. */
+:where(a, button, input, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-ciano);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * COMPATIBILIDADE com as telas da entrega 1A
+ * Elas nasceram só no tema claro. Em vez de reescrever cada uma, os utilitários
+ * que usam viram apelidos dos tokens de tema — e passam a funcionar no escuro.
+ * ═══════════════════════════════════════════════════════════════════════════ */
+.bg-white {
+  background: var(--sup) !important;
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+}
+.text-tinta {
+  color: var(--tx);
+}
+.text-petrol {
+  color: var(--color-petrol-cla);
+}
+.bg-destaque {
+  background: var(--sup-h);
+}
+/* `.tabular` era a classe de número da 1A e apontava para JetBrains Mono.
+   Vira apelido de `.num` — DM Sans, que é a fonte de número da casa. */
+.tabular {
+  font-family: var(--font-num);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * SELETOR — vale para TODO <select> do sistema, sem classe nenhuma.
+ * A seta nativa encostava na borda; aqui ela é desenhada, com respiro à direita.
+ * Fora de @layer de propósito: assim vence o px-* do Tailwind no padding direito.
+ * ═══════════════════════════════════════════════════════════════════════════ */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2rem !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='%234a6572' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 4.5 6 7.5 9 4.5'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.65rem center !important;
+  background-size: 12px 12px !important;
+  cursor: pointer;
+}
+:root[data-tema='escuro'] select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='%23a6bac4' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 4.5 6 7.5 9 4.5'/%3E%3C/svg%3E") !important;
+}
+select:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+/* A lista aberta é desenhada pelo navegador: sem cor explícita, o escuro herdava
+   texto claro sobre o fundo branco da lista. Cor sólida nos dois temas. */
+select option,
+select optgroup {
+  background-color: #ffffff;
+  color: var(--color-tinta);
+}
+:root[data-tema='escuro'] select option,
+:root[data-tema='escuro'] select optgroup {
+  background-color: #17232b;
+  color: #e8edef;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * CHAVE — todo checkbox vira uma chave seletora animada (trilho + bolinha).
+ * Continua sendo <input type="checkbox">: teclado, label e leitor de tela iguais.
+ * ═══════════════════════════════════════════════════════════════════════════ */
+input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  flex-shrink: 0;
+  width: 30px;
+  height: 17px;
+  border-radius: 999px;
+  border: 1px solid var(--brd-forte);
+  background: var(--trilho);
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+input[type='checkbox']::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+input[type='checkbox']:checked {
+  background: var(--color-petrol-cla);
+  border-color: var(--color-petrol-cla);
+}
+:root[data-tema='escuro'] input[type='checkbox']:checked {
+  background: rgba(0, 224, 246, 0.55);
+  border-color: var(--color-ciano);
+  box-shadow: 0 0 10px rgba(0, 224, 246, 0.25);
+}
+input[type='checkbox']:checked::before {
+  transform: translateX(13px);
+}
+/* "Marcar todos" com só parte marcada: bolinha no meio. */
+input[type='checkbox']:indeterminate::before {
+  transform: translateX(6.5px);
+}
+input[type='checkbox']:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+input[type='checkbox']:focus-visible {
+  border-radius: 999px;
+}
+@media (prefers-reduced-motion: reduce) {
+  input[type='checkbox'],
+  input[type='checkbox']::before {
+    transition: none;
+  }
+}

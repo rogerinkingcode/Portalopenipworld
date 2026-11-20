@@ -1,0 +1,4024 @@
+{
+  "contrato_versao": "0.1",
+  "gerado_em": "2026-09-07T00:41:41-03:00",
+  "gerado_por": {
+    "modo": "upload_manual",
+    "autor": "dados de demonstração (fictícios)",
+    "ferramenta": "ipaw-front@0.1.0"
+  },
+  "cobertura": {
+    "revistas": [
+      {
+        "tipo": "marcas",
+        "numero": 2904,
+        "data": "2026-09-01",
+        "fonte_formato": "xml"
+      },
+      {
+        "tipo": "patentes",
+        "numero": 2904,
+        "data": "2026-09-01",
+        "fonte_formato": "xml"
+      },
+      {
+        "tipo": "marcas",
+        "numero": 2903,
+        "data": "2026-08-25",
+        "fonte_formato": "xml"
+      }
+    ]
+  },
+  "completude": {
+    "pessoas": {
+      "completo": true,
+      "n": 17
+    },
+    "ativos": {
+      "completo": true,
+      "n": 23
+    },
+    "vinculos": {
+      "completo": true,
+      "n": 48
+    },
+    "eventos": {
+      "completo": false,
+      "motivo": "revistas anteriores à 2895 não foram varridas",
+      "n": 11
+    },
+    "prazos": {
+      "completo": false,
+      "motivo": "anuidade e prorrogação com régua estimada até confirmação da casa",
+      "n": 14
+    },
+    "documentos": {
+      "completo": true,
+      "n": 20
+    },
+    "servicos": {
+      "completo": false,
+      "motivo": "42,98% dos cards do CRM não têm número de processo — o histórico nasce parcial",
+      "n": 11
+    },
+    "colidencias": {
+      "completo": true,
+      "n": 4
+    }
+  },
+  "lacunas": [
+    {
+      "onde": "ativos (12 jurisdições)",
+      "motivo": "só Brasil tem feed automatizado hoje; EUIPO e USPTO têm API oficial não ligada; Madri e China não têm caminho legítimo de automação"
+    },
+    {
+      "onde": "ativos[desenho_industrial]",
+      "motivo": "a RPI publica desenho industrial só em PDF — não há arquivo estruturado"
+    }
+  ],
+  "pessoas": [
+    {
+      "pessoa_id": "01J9DEM00000000000000PJ001",
+      "tipo": "juridica",
+      "nome": "Hidrovale Bombas e Válvulas Ltda",
+      "nome_normalizado": "HIDROVALE BOMBAS E VALVULAS LTDA",
+      "documentos": [
+        {
+          "tipo": "cnpj",
+          "valor": "12.345.678/0001-90",
+          "pais": "BR"
+        }
+      ],
+      "pais": "BR",
+      "uf": "RS",
+      "externo": {
+        "ploomes_contact_id": 500100001
+      },
+      "fonte": "inpi_consulta",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00",
+      "razao_social": "HIDROVALE BOMBAS E VALVULAS LTDA",
+      "contato": {
+        "emails": [
+          "juridico@hidrovale.exemplo"
+        ],
+        "telefones": [
+          "+55 51 90000-0001"
+        ],
+        "email_compartilhado": false
+      }
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000PJ002",
+      "tipo": "juridica",
+      "nome": "Terrafé Alimentos S.A.",
+      "nome_normalizado": "TERRAFE ALIMENTOS S.A.",
+      "documentos": [
+        {
+          "tipo": "cnpj",
+          "valor": "23.456.789/0001-01",
+          "pais": "BR"
+        }
+      ],
+      "pais": "BR",
+      "uf": "SP",
+      "externo": {
+        "ploomes_contact_id": 500100002
+      },
+      "fonte": "inpi_consulta",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00",
+      "razao_social": "TERRAFE ALIMENTOS S.A.",
+      "contato": {
+        "emails": [
+          "marcas@terrafe.exemplo"
+        ],
+        "telefones": [
+          "+55 11 90000-0002"
+        ],
+        "email_compartilhado": false
+      }
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000PJ003",
+      "tipo": "juridica",
+      "nome": "Vitrana Cosméticos Ltda",
+      "nome_normalizado": "VITRANA COSMETICOS LTDA",
+      "documentos": [
+        {
+          "tipo": "cnpj",
+          "valor": "34.567.890/0001-12",
+          "pais": "BR"
+        }
+      ],
+      "pais": "BR",
+      "uf": "SP",
+      "externo": {
+        "ploomes_contact_id": 500100003
+      },
+      "fonte": "inpi_consulta",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00",
+      "contato": {
+        "emails": [
+          "legal@vitrana.exemplo"
+        ],
+        "telefones": [
+          "+55 11 90000-0003"
+        ],
+        "email_compartilhado": false
+      }
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000PJ004",
+      "tipo": "juridica",
+      "nome": "Nordeste Bioenergia S.A.",
+      "nome_normalizado": "NORDESTE BIOENERGIA S.A.",
+      "documentos": [
+        {
+          "tipo": "cnpj",
+          "valor": "45.678.901/0001-23",
+          "pais": "BR"
+        }
+      ],
+      "pais": "BR",
+      "uf": "PE",
+      "externo": {
+        "ploomes_contact_id": 500100004
+      },
+      "fonte": "inpi_consulta",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00",
+      "contato": {
+        "emails": [
+          "pi@nordestebio.exemplo"
+        ],
+        "telefones": [
+          "+55 81 90000-0004"
+        ],
+        "email_compartilhado": false
+      }
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000PJ005",
+      "tipo": "juridica",
+      "nome": "Studio Kaba Arquitetura Ltda",
+      "nome_normalizado": "STUDIO KABA ARQUITETURA LTDA",
+      "documentos": [
+        {
+          "tipo": "cnpj",
+          "valor": "56.789.012/0001-34",
+          "pais": "BR"
+        }
+      ],
+      "pais": "BR",
+      "uf": "SC",
+      "externo": {},
+      "fonte": "inpi_consulta",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00",
+      "contato": {
+        "emails": [
+          "contato@studiokaba.exemplo"
+        ],
+        "telefones": [
+          "+55 48 90000-0005"
+        ],
+        "email_compartilhado": false
+      }
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000PF006",
+      "tipo": "fisica",
+      "nome": "Paulo Renner Sobral",
+      "nome_normalizado": "PAULO RENNER SOBRAL",
+      "documentos": [
+        {
+          "tipo": "cpf",
+          "valor": "123.456.789-09",
+          "pais": "BR"
+        }
+      ],
+      "pais": "BR",
+      "uf": "PR",
+      "externo": {},
+      "fonte": "inpi_consulta",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00",
+      "contato": {
+        "emails": [
+          "paulo.renner@exemplo.com"
+        ],
+        "telefones": [
+          "+55 41 90000-0006"
+        ],
+        "email_compartilhado": false
+      }
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000PF010",
+      "tipo": "fisica",
+      "nome": "Ana Beatriz Ferraz",
+      "nome_normalizado": "ANA BEATRIZ FERRAZ",
+      "documentos": [
+        {
+          "tipo": "cpf",
+          "valor": "987.654.321-00",
+          "pais": "BR"
+        }
+      ],
+      "pais": "BR",
+      "uf": "RS",
+      "externo": {},
+      "fonte": "inpi_consulta",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000PA007",
+      "tipo": "juridica",
+      "nome": "Marcas do Sul Assessoria Ltda",
+      "nome_normalizado": "MARCAS DO SUL ASSESSORIA LTDA",
+      "documentos": [
+        {
+          "tipo": "cnpj",
+          "valor": "67.890.123/0001-45",
+          "pais": "BR"
+        }
+      ],
+      "pais": "BR",
+      "uf": "SC",
+      "externo": {
+        "ploomes_contact_id": 500100007
+      },
+      "fonte": "inpi_consulta",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00",
+      "contato": {
+        "emails": [
+          "operacoes@marcasdosul.exemplo"
+        ],
+        "telefones": [
+          "+55 47 90000-0007"
+        ],
+        "email_compartilhado": false
+      }
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000CF008",
+      "tipo": "juridica",
+      "nome": "Padaria Estrela do Vale ME",
+      "nome_normalizado": "PADARIA ESTRELA DO VALE ME",
+      "documentos": [],
+      "pais": "BR",
+      "uf": "SC",
+      "externo": {},
+      "fonte": "declarado_cliente",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00",
+      "gerido_por": "01J9DEM00000000000000PA007"
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000CF009",
+      "tipo": "juridica",
+      "nome": "AutoPeças Bertoldi Ltda",
+      "nome_normalizado": "AUTOPECAS BERTOLDI LTDA",
+      "documentos": [
+        {
+          "tipo": "cnpj",
+          "valor": "78.901.234/0001-56",
+          "pais": "BR"
+        }
+      ],
+      "pais": "BR",
+      "uf": "PR",
+      "externo": {},
+      "fonte": "declarado_cliente",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00",
+      "gerido_por": "01J9DEM00000000000000PA007"
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000CT011",
+      "tipo": "fisica",
+      "nome": "Carla Nogueira",
+      "nome_normalizado": "CARLA NOGUEIRA",
+      "documentos": [],
+      "pais": "BR",
+      "uf": "RS",
+      "externo": {},
+      "fonte": "ploomes",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00",
+      "contato": {
+        "emails": [
+          "carla.nogueira@hidrovale.exemplo"
+        ],
+        "telefones": [
+          "+55 51 90000-0011"
+        ],
+        "email_compartilhado": false
+      }
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000CT012",
+      "tipo": "fisica",
+      "nome": "Marina Palhares",
+      "nome_normalizado": "MARINA PALHARES",
+      "documentos": [],
+      "pais": "BR",
+      "uf": "SP",
+      "externo": {},
+      "fonte": "ploomes",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00",
+      "contato": {
+        "emails": [
+          "marina.palhares@terrafe.exemplo"
+        ],
+        "telefones": [
+          "+55 11 90000-0012"
+        ],
+        "email_compartilhado": false
+      }
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000AG013",
+      "tipo": "juridica",
+      "nome": "Nordlicht IP Partners",
+      "nome_normalizado": "NORDLICHT IP PARTNERS",
+      "documentos": [
+        {
+          "tipo": "estrangeiro",
+          "valor": "DE811234567",
+          "pais": "DE"
+        }
+      ],
+      "pais": "DE",
+      "externo": {},
+      "fonte": "inpi_consulta",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000AG014",
+      "tipo": "juridica",
+      "nome": "Sakura & Kondo IP Office",
+      "nome_normalizado": "SAKURA & KONDO IP OFFICE",
+      "documentos": [
+        {
+          "tipo": "estrangeiro",
+          "valor": "JP0100000001",
+          "pais": "JP"
+        }
+      ],
+      "pais": "JP",
+      "externo": {},
+      "fonte": "inpi_consulta",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000AG015",
+      "tipo": "juridica",
+      "nome": "Cordillera Marcas SpA",
+      "nome_normalizado": "CORDILLERA MARCAS SPA",
+      "documentos": [
+        {
+          "tipo": "estrangeiro",
+          "valor": "CL761234567",
+          "pais": "CL"
+        }
+      ],
+      "pais": "CL",
+      "externo": {},
+      "fonte": "inpi_consulta",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000AG016",
+      "tipo": "juridica",
+      "nome": "Beijing Hanwei IP Agency",
+      "nome_normalizado": "BEIJING HANWEI IP AGENCY",
+      "documentos": [
+        {
+          "tipo": "cpf",
+          "valor": "CN911100000001",
+          "pais": "CN"
+        }
+      ],
+      "pais": "CN",
+      "externo": {},
+      "fonte": "inpi_consulta",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "pessoa_id": "01J9DEM00000000000000PR017",
+      "tipo": "juridica",
+      "nome": "Apex Propriedade Intelectual Ltda",
+      "nome_normalizado": "APEX PROPRIEDADE INTELECTUAL LTDA",
+      "documentos": [
+        {
+          "tipo": "cnpj",
+          "valor": "89.012.345/0001-67",
+          "pais": "BR"
+        }
+      ],
+      "pais": "BR",
+      "uf": "TO",
+      "externo": {},
+      "fonte": "inpi_consulta",
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    }
+  ],
+  "ativos": [
+    {
+      "ativo_id": "01J9DEM00000000000000AT001",
+      "especie": "marca",
+      "jurisdicao": "BR",
+      "identificadores": [
+        {
+          "tipo": "inpi_marca",
+          "valor_bruto": "934567890",
+          "valor_normalizado": "934567890",
+          "jurisdicao": "BR",
+          "papel": "registro",
+          "desde": "2022-08-09",
+          "fonte": "inpi_consulta"
+        }
+      ],
+      "familia_id": "01J9DEM00000000000000FM001",
+      "marca": {
+        "nome": "HIDROVALE",
+        "nome_normalizado": "HIDROVALE",
+        "apresentacao": "mista",
+        "natureza": "produto",
+        "classes": [
+          {
+            "codigo": "07",
+            "edicao_ncl": "Ncl(12)",
+            "especificacao_bruta": "Bombas hidráulicas; válvulas [partes de máquinas]; compressores"
+          }
+        ]
+      },
+      "datas": {
+        "deposito": "2022-08-09",
+        "concessao": "2024-05-14",
+        "vigencia_ate": "2034-05-14",
+        "procedencia": {
+          "deposito": {
+            "fonte": "inpi_consulta",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "codigo": "IPAS158",
+        "texto": "Registro em vigor",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "inpi_consulta"
+      },
+      "vigilancia": {
+        "ativa": true,
+        "elegivel": true,
+        "motivos": [],
+        "fonte_feed": "rpi_xml",
+        "atualizado_em": "2026-09-01",
+        "proxima_verificacao": "2026-09-08"
+      },
+      "pendencias": [],
+      "fonte": "inpi_consulta",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT002",
+      "especie": "marca",
+      "jurisdicao": "EM",
+      "identificadores": [
+        {
+          "tipo": "euipo",
+          "valor_bruto": "018999999",
+          "valor_normalizado": "018999999",
+          "jurisdicao": "EM",
+          "papel": "registro",
+          "desde": "2024-10-15",
+          "fonte": "certificado_agente"
+        }
+      ],
+      "familia_id": "01J9DEM00000000000000FM001",
+      "marca": {
+        "nome": "HIDROVALE",
+        "nome_normalizado": "HIDROVALE",
+        "apresentacao": "nominativa",
+        "natureza": "produto",
+        "classes": [
+          {
+            "codigo": "07",
+            "edicao_ncl": "Ncl(12)",
+            "especificacao_bruta": "Hydraulic pumps; valves [parts of machines]"
+          }
+        ]
+      },
+      "datas": {
+        "deposito": "2024-10-15",
+        "concessao": "2025-03-03",
+        "vigencia_ate": "2034-10-15",
+        "procedencia": {
+          "deposito": {
+            "fonte": "certificado_agente",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "texto": "Registered",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "certificado_agente"
+      },
+      "vigilancia": {
+        "ativa": false,
+        "elegivel": false,
+        "motivos": [
+          "EUIPO tem API oficial, mas não está ligada no MVP — a fonte atual é o certificado do agente"
+        ],
+        "motivo": "EUIPO tem API oficial, mas não está ligada no MVP — a fonte atual é o certificado do agente",
+        "atualizado_em": "2026-08-14"
+      },
+      "pendencias": [],
+      "fonte": "certificado_agente",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT003",
+      "especie": "marca",
+      "jurisdicao": "US",
+      "identificadores": [
+        {
+          "tipo": "uspto_serial",
+          "valor_bruto": "97/123,456",
+          "valor_normalizado": "97/123,456",
+          "jurisdicao": "US",
+          "papel": "pedido",
+          "desde": "2025-02-11",
+          "fonte": "certificado_agente"
+        }
+      ],
+      "familia_id": "01J9DEM00000000000000FM001",
+      "marca": {
+        "nome": "HIDROVALE",
+        "nome_normalizado": "HIDROVALE",
+        "apresentacao": "nominativa",
+        "natureza": "produto",
+        "classes": [
+          {
+            "codigo": "07",
+            "especificacao_bruta": "Hydraulic pumps and valves for industrial use"
+          }
+        ]
+      },
+      "datas": {
+        "deposito": "2025-02-11",
+        "concessao": null,
+        "vigencia_ate": null,
+        "procedencia": {
+          "deposito": {
+            "fonte": "certificado_agente",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "texto": "Published for opposition",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "certificado_agente"
+      },
+      "vigilancia": {
+        "ativa": false,
+        "elegivel": false,
+        "motivos": [
+          "USPTO tem API oficial (TSDR/ODP); não ligada no MVP"
+        ],
+        "motivo": "USPTO tem API oficial (TSDR/ODP); não ligada no MVP",
+        "atualizado_em": "2026-08-14"
+      },
+      "pendencias": [],
+      "fonte": "certificado_agente",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT004",
+      "especie": "marca",
+      "jurisdicao": "CN",
+      "identificadores": [
+        {
+          "tipo": "nacional_estrangeiro",
+          "valor_bruto": "76543210",
+          "valor_normalizado": "76543210",
+          "jurisdicao": "CN",
+          "papel": "registro",
+          "desde": "2024-06-03",
+          "fonte": "certificado_agente"
+        }
+      ],
+      "familia_id": "01J9DEM00000000000000FM001",
+      "marca": {
+        "nome": "HIDROVALE",
+        "nome_normalizado": "HIDROVALE",
+        "apresentacao": "nominativa",
+        "natureza": "produto",
+        "classes": [
+          {
+            "codigo": "07",
+            "especificacao_bruta": "液压泵；阀门（机器部件）"
+          }
+        ]
+      },
+      "datas": {
+        "deposito": "2024-06-03",
+        "concessao": "2025-08-20",
+        "vigencia_ate": "2035-08-20",
+        "procedencia": {
+          "deposito": {
+            "fonte": "certificado_agente",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "texto": "Registrada (conforme certificado do agente)",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "certificado_agente"
+      },
+      "vigilancia": {
+        "ativa": false,
+        "elegivel": false,
+        "motivos": [
+          "CNIPA não tem API pública e responde 412 a consulta automatizada — fonte: certificado do agente"
+        ],
+        "motivo": "CNIPA não tem API pública e responde 412 a consulta automatizada — fonte: certificado do agente",
+        "atualizado_em": "2026-08-14"
+      },
+      "pendencias": [],
+      "fonte": "certificado_agente",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT005",
+      "especie": "patente_invencao",
+      "jurisdicao": "BR",
+      "identificadores": [
+        {
+          "tipo": "inpi_patente",
+          "valor_bruto": "BR 10 2023 012345-6",
+          "valor_normalizado": "BR102023012345-6",
+          "jurisdicao": "BR",
+          "papel": "pedido",
+          "desde": "2023-06-20",
+          "fonte": "inpi_consulta"
+        }
+      ],
+      "patente": {
+        "titulo": "Válvula de retenção com selo autoajustável para bombeamento de fluidos abrasivos",
+        "ipc": [
+          "F16K 15/02",
+          "F04D 29/12"
+        ]
+      },
+      "datas": {
+        "deposito": "2023-06-20",
+        "concessao": null,
+        "vigencia_ate": null,
+        "procedencia": {
+          "deposito": {
+            "fonte": "inpi_consulta",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "codigo": "6.1",
+        "texto": "Exigência técnica publicada — aguardando manifestação",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "inpi_consulta"
+      },
+      "vigilancia": {
+        "ativa": true,
+        "elegivel": true,
+        "motivos": [],
+        "fonte_feed": "rpi_xml",
+        "atualizado_em": "2026-09-01",
+        "proxima_verificacao": "2026-09-08"
+      },
+      "pendencias": [],
+      "fonte": "inpi_consulta",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT006",
+      "especie": "modelo_utilidade",
+      "jurisdicao": "BR",
+      "identificadores": [
+        {
+          "tipo": "inpi_patente",
+          "valor_bruto": "BR 20 2024 008877-1",
+          "valor_normalizado": "BR202024008877-1",
+          "jurisdicao": "BR",
+          "papel": "pedido",
+          "desde": "2024-04-18",
+          "fonte": "inpi_consulta"
+        }
+      ],
+      "patente": {
+        "titulo": "Disposição construtiva aplicada em rotor de bomba centrífuga",
+        "ipc": [
+          "F04D 29/22"
+        ]
+      },
+      "datas": {
+        "deposito": "2024-04-18",
+        "concessao": null,
+        "vigencia_ate": null,
+        "procedencia": {
+          "deposito": {
+            "fonte": "inpi_consulta",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "codigo": "2.1",
+        "texto": "Em exame técnico",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "inpi_consulta"
+      },
+      "vigilancia": {
+        "ativa": true,
+        "elegivel": true,
+        "motivos": [],
+        "fonte_feed": "rpi_xml",
+        "atualizado_em": "2026-09-01",
+        "proxima_verificacao": "2026-09-08"
+      },
+      "pendencias": [],
+      "fonte": "inpi_consulta",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT007",
+      "especie": "desenho_industrial",
+      "jurisdicao": "BR",
+      "identificadores": [
+        {
+          "tipo": "inpi_di",
+          "valor_bruto": "BR 30 2025 001234-5",
+          "valor_normalizado": "BR302025001234-5",
+          "jurisdicao": "BR",
+          "papel": "registro",
+          "desde": "2025-03-12",
+          "fonte": "inpi_consulta"
+        }
+      ],
+      "patente": {
+        "titulo": "Configuração aplicada a corpo de válvula industrial"
+      },
+      "datas": {
+        "deposito": "2025-03-12",
+        "concessao": "2025-11-04",
+        "vigencia_ate": "2035-03-12",
+        "procedencia": {
+          "deposito": {
+            "fonte": "inpi_consulta",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "codigo": "16.1",
+        "texto": "Registro concedido",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "inpi_consulta"
+      },
+      "vigilancia": {
+        "ativa": false,
+        "elegivel": false,
+        "motivos": [
+          "Desenho industrial: a RPI publica DI só em PDF — não há feed estruturado (DI####.zip devolve 404)"
+        ],
+        "motivo": "Desenho industrial: a RPI publica DI só em PDF — não há feed estruturado (DI####.zip devolve 404)",
+        "atualizado_em": "2026-08-14"
+      },
+      "pendencias": [],
+      "fonte": "inpi_consulta",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT008",
+      "especie": "marca",
+      "jurisdicao": "BR",
+      "identificadores": [
+        {
+          "tipo": "inpi_marca",
+          "valor_bruto": "928776554",
+          "valor_normalizado": "928776554",
+          "jurisdicao": "BR",
+          "papel": "registro",
+          "desde": "2021-11-30",
+          "fonte": "inpi_consulta"
+        }
+      ],
+      "familia_id": "01J9DEM00000000000000FM002",
+      "marca": {
+        "nome": "TERRAFÉ",
+        "nome_normalizado": "TERRAFÉ",
+        "apresentacao": "mista",
+        "natureza": "produto",
+        "classes": [
+          {
+            "codigo": "30",
+            "edicao_ncl": "Ncl(12)",
+            "especificacao_bruta": "Café; café torrado e moído; cápsulas de café; achocolatado"
+          },
+          {
+            "codigo": "43",
+            "edicao_ncl": "Ncl(12)",
+            "especificacao_bruta": "Serviços de cafeteria; serviços de bar e lanchonete"
+          }
+        ]
+      },
+      "datas": {
+        "deposito": "2021-11-30",
+        "concessao": "2023-08-15",
+        "vigencia_ate": "2033-08-15",
+        "procedencia": {
+          "deposito": {
+            "fonte": "inpi_consulta",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "codigo": "IPAS158",
+        "texto": "Registro em vigor",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "inpi_consulta"
+      },
+      "vigilancia": {
+        "ativa": true,
+        "elegivel": true,
+        "motivos": [],
+        "fonte_feed": "rpi_xml",
+        "atualizado_em": "2026-09-01",
+        "proxima_verificacao": "2026-09-08"
+      },
+      "pendencias": [],
+      "fonte": "inpi_consulta",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT009",
+      "especie": "marca",
+      "jurisdicao": "WO",
+      "identificadores": [
+        {
+          "tipo": "madri",
+          "valor_bruto": "1734501",
+          "valor_normalizado": "1734501",
+          "jurisdicao": "WO",
+          "papel": "registro",
+          "desde": "2024-02-20",
+          "fonte": "certificado_agente"
+        }
+      ],
+      "familia_id": "01J9DEM00000000000000FM002",
+      "marca": {
+        "nome": "TERRAFÉ",
+        "nome_normalizado": "TERRAFÉ",
+        "apresentacao": "nominativa",
+        "natureza": "produto",
+        "classes": [
+          {
+            "codigo": "30",
+            "edicao_ncl": "Ncl(12)",
+            "especificacao_bruta": "Coffee; roasted and ground coffee; coffee capsules"
+          }
+        ]
+      },
+      "datas": {
+        "deposito": "2024-02-20",
+        "concessao": "2024-08-01",
+        "vigencia_ate": "2034-02-20",
+        "procedencia": {
+          "deposito": {
+            "fonte": "certificado_agente",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "texto": "Registro internacional em vigor — designações AR, CL, MX, PT",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "certificado_agente"
+      },
+      "vigilancia": {
+        "ativa": false,
+        "elegivel": false,
+        "motivos": [
+          "Madri: os termos da WIPO proíbem consulta automatizada — a atualização vem do agente ou do certificado"
+        ],
+        "motivo": "Madri: os termos da WIPO proíbem consulta automatizada — a atualização vem do agente ou do certificado",
+        "atualizado_em": "2026-08-14"
+      },
+      "pendencias": [],
+      "fonte": "certificado_agente",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT010",
+      "especie": "marca",
+      "jurisdicao": "AR",
+      "identificadores": [
+        {
+          "tipo": "nacional_estrangeiro",
+          "valor_bruto": "4123456",
+          "valor_normalizado": "4123456",
+          "jurisdicao": "AR",
+          "papel": "registro",
+          "desde": "2024-03-05",
+          "fonte": "certificado_agente"
+        }
+      ],
+      "familia_id": "01J9DEM00000000000000FM002",
+      "marca": {
+        "nome": "TERRAFÉ",
+        "nome_normalizado": "TERRAFÉ",
+        "apresentacao": "nominativa",
+        "natureza": "produto",
+        "classes": [
+          {
+            "codigo": "30",
+            "especificacao_bruta": "Café; café tostado y molido"
+          }
+        ]
+      },
+      "datas": {
+        "deposito": "2024-03-05",
+        "concessao": "2025-06-18",
+        "vigencia_ate": "2035-06-18",
+        "procedencia": {
+          "deposito": {
+            "fonte": "certificado_agente",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "texto": "Concedida (designação de Madri)",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "certificado_agente"
+      },
+      "vigilancia": {
+        "ativa": false,
+        "elegivel": false,
+        "motivos": [
+          "INPI argentino não sondado — fonte: certificado do agente"
+        ],
+        "motivo": "INPI argentino não sondado — fonte: certificado do agente",
+        "atualizado_em": "2026-08-14"
+      },
+      "pendencias": [],
+      "fonte": "certificado_agente",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT011",
+      "especie": "marca",
+      "jurisdicao": "MX",
+      "identificadores": [
+        {
+          "tipo": "nacional_estrangeiro",
+          "valor_bruto": "2456789",
+          "valor_normalizado": "2456789",
+          "jurisdicao": "MX",
+          "papel": "registro",
+          "desde": "2024-03-05",
+          "fonte": "certificado_agente"
+        }
+      ],
+      "familia_id": "01J9DEM00000000000000FM002",
+      "marca": {
+        "nome": "TERRAFÉ",
+        "nome_normalizado": "TERRAFÉ",
+        "apresentacao": "nominativa",
+        "natureza": "produto",
+        "classes": [
+          {
+            "codigo": "30",
+            "especificacao_bruta": "Café; café tostado y molido"
+          }
+        ]
+      },
+      "datas": {
+        "deposito": "2024-03-05",
+        "concessao": null,
+        "vigencia_ate": null,
+        "procedencia": {
+          "deposito": {
+            "fonte": "certificado_agente",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "texto": "Em exame — designação de Madri",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "certificado_agente"
+      },
+      "vigilancia": {
+        "ativa": false,
+        "elegivel": false,
+        "motivos": [
+          "IMPI mexicano não sondado — fonte: certificado do agente"
+        ],
+        "motivo": "IMPI mexicano não sondado — fonte: certificado do agente",
+        "atualizado_em": "2026-08-14"
+      },
+      "pendencias": [],
+      "fonte": "certificado_agente",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT012",
+      "especie": "marca",
+      "jurisdicao": "PT",
+      "identificadores": [
+        {
+          "tipo": "nacional_estrangeiro",
+          "valor_bruto": "712345",
+          "valor_normalizado": "712345",
+          "jurisdicao": "PT",
+          "papel": "registro",
+          "desde": "2024-03-05",
+          "fonte": "certificado_agente"
+        }
+      ],
+      "familia_id": "01J9DEM00000000000000FM002",
+      "marca": {
+        "nome": "TERRAFÉ",
+        "nome_normalizado": "TERRAFÉ",
+        "apresentacao": "nominativa",
+        "natureza": "produto",
+        "classes": [
+          {
+            "codigo": "30"
+          },
+          {
+            "codigo": "43"
+          }
+        ]
+      },
+      "datas": {
+        "deposito": "2024-03-05",
+        "concessao": "2024-12-02",
+        "vigencia_ate": "2034-03-05",
+        "procedencia": {
+          "deposito": {
+            "fonte": "certificado_agente",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "texto": "Concedida (designação de Madri)",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "certificado_agente"
+      },
+      "vigilancia": {
+        "ativa": false,
+        "elegivel": false,
+        "motivos": [
+          "INPI português não sondado — fonte: certificado do agente"
+        ],
+        "motivo": "INPI português não sondado — fonte: certificado do agente",
+        "atualizado_em": "2026-08-14"
+      },
+      "pendencias": [],
+      "fonte": "certificado_agente",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT013",
+      "especie": "marca",
+      "jurisdicao": "BR",
+      "identificadores": [
+        {
+          "tipo": "inpi_marca",
+          "valor_bruto": "941002233",
+          "valor_normalizado": "941002233",
+          "jurisdicao": "BR",
+          "papel": "registro",
+          "desde": "2023-04-27",
+          "fonte": "inpi_consulta"
+        }
+      ],
+      "marca": {
+        "nome": "VITRANA",
+        "nome_normalizado": "VITRANA",
+        "apresentacao": "nominativa",
+        "natureza": "produto",
+        "classes": [
+          {
+            "codigo": "03",
+            "edicao_ncl": "Ncl(12)",
+            "especificacao_bruta": "Cosméticos; cremes para a pele; loções capilares; sabonetes"
+          }
+        ]
+      },
+      "datas": {
+        "deposito": "2023-04-27",
+        "concessao": "2025-02-11",
+        "vigencia_ate": "2035-02-11",
+        "procedencia": {
+          "deposito": {
+            "fonte": "inpi_consulta",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "codigo": "IPAS158",
+        "texto": "Registro em vigor",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "inpi_consulta"
+      },
+      "vigilancia": {
+        "ativa": true,
+        "elegivel": true,
+        "motivos": [],
+        "fonte_feed": "rpi_xml",
+        "atualizado_em": "2026-09-01",
+        "proxima_verificacao": "2026-09-08"
+      },
+      "pendencias": [],
+      "fonte": "inpi_consulta",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT014",
+      "especie": "desenho_industrial",
+      "jurisdicao": "BR",
+      "identificadores": [
+        {
+          "tipo": "inpi_di",
+          "valor_bruto": "BR 30 2024 004455-8",
+          "valor_normalizado": "BR302024004455-8",
+          "jurisdicao": "BR",
+          "papel": "registro",
+          "desde": "2024-08-30",
+          "fonte": "inpi_consulta"
+        }
+      ],
+      "patente": {
+        "titulo": "Configuração aplicada a frasco de cosmético"
+      },
+      "datas": {
+        "deposito": "2024-08-30",
+        "concessao": "2025-05-06",
+        "vigencia_ate": "2034-08-30",
+        "procedencia": {
+          "deposito": {
+            "fonte": "inpi_consulta",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "codigo": "16.1",
+        "texto": "Registro concedido",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "inpi_consulta"
+      },
+      "vigilancia": {
+        "ativa": false,
+        "elegivel": false,
+        "motivos": [
+          "Desenho industrial: a RPI publica DI só em PDF — não há feed estruturado"
+        ],
+        "motivo": "Desenho industrial: a RPI publica DI só em PDF — não há feed estruturado",
+        "atualizado_em": "2026-08-14"
+      },
+      "pendencias": [],
+      "fonte": "inpi_consulta",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT015",
+      "especie": "marca",
+      "jurisdicao": "BR",
+      "identificadores": [],
+      "marca": {
+        "nome": "VITRANA BOTANICS",
+        "nome_normalizado": "VITRANA BOTANICS",
+        "apresentacao": "mista",
+        "natureza": "produto",
+        "classes": [
+          {
+            "codigo": "03",
+            "edicao_ncl": "Ncl(12)",
+            "especificacao_bruta": "Cosméticos de origem vegetal"
+          }
+        ]
+      },
+      "datas": {
+        "deposito": null,
+        "concessao": null,
+        "vigencia_ate": null,
+        "procedencia": {}
+      },
+      "situacao": {
+        "texto": "Aguardando protocolo — número ainda não atribuído pelo INPI",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "inpi_consulta"
+      },
+      "vigilancia": {
+        "ativa": false,
+        "elegivel": false,
+        "motivos": [
+          "Ativo em nascimento: sem número, não há o que cruzar com a revista"
+        ],
+        "motivo": "Ativo em nascimento: sem número, não há o que cruzar com a revista",
+        "atualizado_em": "2026-08-14"
+      },
+      "pendencias": [
+        {
+          "tipo": "sem_numero",
+          "detalhe": "o número chega quando o INPI atribuir; o identificador interno do portfólio não muda"
+        }
+      ],
+      "fonte": "inpi_consulta",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT016",
+      "especie": "patente_invencao",
+      "jurisdicao": "BR",
+      "identificadores": [
+        {
+          "tipo": "inpi_patente",
+          "valor_bruto": "BR 11 2022 019345-7",
+          "valor_normalizado": "BR112022019345-7",
+          "jurisdicao": "BR",
+          "papel": "pedido",
+          "desde": "2022-09-26",
+          "fonte": "inpi_consulta"
+        }
+      ],
+      "patente": {
+        "titulo": "Processo de hidrólise enzimática de bagaço de cana com recirculação de licor",
+        "ipc": [
+          "C12P 19/14",
+          "C13K 1/02"
+        ]
+      },
+      "datas": {
+        "deposito": "2022-09-26",
+        "concessao": null,
+        "vigencia_ate": null,
+        "procedencia": {
+          "deposito": {
+            "fonte": "inpi_consulta",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "codigo": "9.1",
+        "texto": "Deferido — aguardando pagamento da retribuição final",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "inpi_consulta"
+      },
+      "vigilancia": {
+        "ativa": true,
+        "elegivel": true,
+        "motivos": [],
+        "fonte_feed": "rpi_xml",
+        "atualizado_em": "2026-09-01",
+        "proxima_verificacao": "2026-09-08"
+      },
+      "pendencias": [],
+      "fonte": "inpi_consulta",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT017",
+      "especie": "patente_invencao",
+      "jurisdicao": "WO",
+      "identificadores": [
+        {
+          "tipo": "pct",
+          "valor_bruto": "PCT/BR2023/050123",
+          "valor_normalizado": "PCT/BR2023/050123",
+          "jurisdicao": "WO",
+          "papel": "internacional",
+          "desde": "2023-03-14",
+          "fonte": "certificado_agente"
+        }
+      ],
+      "patente": {
+        "titulo": "Processo de hidrólise enzimática de bagaço de cana com recirculação de licor"
+      },
+      "datas": {
+        "deposito": "2023-03-14",
+        "concessao": null,
+        "vigencia_ate": null,
+        "procedencia": {
+          "deposito": {
+            "fonte": "certificado_agente",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "texto": "Fase internacional encerrada — fases nacionais em curso",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "certificado_agente"
+      },
+      "vigilancia": {
+        "ativa": false,
+        "elegivel": false,
+        "motivos": [
+          "PCT: o dado chega pelo EPO OPS (não ligado no MVP) e pelo XML do INPI na fase nacional"
+        ],
+        "motivo": "PCT: o dado chega pelo EPO OPS (não ligado no MVP) e pelo XML do INPI na fase nacional",
+        "atualizado_em": "2026-08-14"
+      },
+      "pendencias": [],
+      "fonte": "certificado_agente",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT018",
+      "especie": "patente_invencao",
+      "jurisdicao": "JP",
+      "identificadores": [
+        {
+          "tipo": "nacional_estrangeiro",
+          "valor_bruto": "2024-512345",
+          "valor_normalizado": "2024-512345",
+          "jurisdicao": "JP",
+          "papel": "pedido",
+          "desde": "2024-09-12",
+          "fonte": "certificado_agente"
+        }
+      ],
+      "patente": {
+        "titulo": "サトウキビバガスの酵素加水分解プロセス"
+      },
+      "datas": {
+        "deposito": "2024-09-12",
+        "concessao": null,
+        "vigencia_ate": null,
+        "procedencia": {
+          "deposito": {
+            "fonte": "certificado_agente",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "texto": "Em exame (fase nacional do PCT)",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "certificado_agente"
+      },
+      "vigilancia": {
+        "ativa": false,
+        "elegivel": false,
+        "motivos": [
+          "JPO não sondado — fonte: relatório do agente japonês"
+        ],
+        "motivo": "JPO não sondado — fonte: relatório do agente japonês",
+        "atualizado_em": "2026-08-14"
+      },
+      "pendencias": [],
+      "fonte": "certificado_agente",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT019",
+      "especie": "marca",
+      "jurisdicao": "BR",
+      "identificadores": [
+        {
+          "tipo": "inpi_marca",
+          "valor_bruto": "944301188",
+          "valor_normalizado": "944301188",
+          "jurisdicao": "BR",
+          "papel": "pedido",
+          "desde": "2025-10-08",
+          "fonte": "inpi_consulta"
+        }
+      ],
+      "marca": {
+        "nome": "STUDIO KABA",
+        "nome_normalizado": "STUDIO KABA",
+        "apresentacao": "mista",
+        "natureza": "produto",
+        "classes": [
+          {
+            "codigo": "42",
+            "edicao_ncl": "Ncl(12)",
+            "especificacao_bruta": "Serviços de arquitetura; design de interiores"
+          }
+        ]
+      },
+      "datas": {
+        "deposito": "2025-10-08",
+        "concessao": null,
+        "vigencia_ate": null,
+        "procedencia": {
+          "deposito": {
+            "fonte": "inpi_consulta",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "codigo": "IPAS009",
+        "texto": "Publicado para oposição",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "inpi_consulta"
+      },
+      "vigilancia": {
+        "ativa": true,
+        "elegivel": true,
+        "motivos": [],
+        "fonte_feed": "rpi_xml",
+        "atualizado_em": "2026-09-01",
+        "proxima_verificacao": "2026-09-08"
+      },
+      "pendencias": [],
+      "fonte": "inpi_consulta",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT020",
+      "especie": "modelo_utilidade",
+      "jurisdicao": "BR",
+      "identificadores": [
+        {
+          "tipo": "inpi_patente",
+          "valor_bruto": "BR 20 2023 006611-4",
+          "valor_normalizado": "BR202023006611-4",
+          "jurisdicao": "BR",
+          "papel": "registro",
+          "desde": "2023-04-03",
+          "fonte": "inpi_consulta"
+        }
+      ],
+      "patente": {
+        "titulo": "Disposição aplicada em suporte articulado para instrumentos cirúrgicos",
+        "ipc": [
+          "A61B 90/50"
+        ]
+      },
+      "datas": {
+        "deposito": "2023-04-03",
+        "concessao": "2025-09-16",
+        "vigencia_ate": "2038-04-03",
+        "procedencia": {
+          "deposito": {
+            "fonte": "inpi_consulta",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "codigo": "16.1",
+        "texto": "Carta-patente expedida",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "inpi_consulta"
+      },
+      "vigilancia": {
+        "ativa": true,
+        "elegivel": true,
+        "motivos": [],
+        "fonte_feed": "rpi_xml",
+        "atualizado_em": "2026-09-01",
+        "proxima_verificacao": "2026-09-08"
+      },
+      "pendencias": [],
+      "fonte": "inpi_consulta",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT021",
+      "especie": "marca",
+      "jurisdicao": "BR",
+      "identificadores": [
+        {
+          "tipo": "inpi_marca",
+          "valor_bruto": "939887766",
+          "valor_normalizado": "939887766",
+          "jurisdicao": "BR",
+          "papel": "registro",
+          "desde": "2022-12-14",
+          "fonte": "inpi_consulta"
+        }
+      ],
+      "marca": {
+        "nome": "ESTRELA DO VALE",
+        "nome_normalizado": "ESTRELA DO VALE",
+        "apresentacao": "mista",
+        "natureza": "produto",
+        "classes": [
+          {
+            "codigo": "30",
+            "edicao_ncl": "Ncl(12)",
+            "especificacao_bruta": "Pães; bolos; produtos de panificação"
+          }
+        ]
+      },
+      "datas": {
+        "deposito": "2022-12-14",
+        "concessao": "2024-11-19",
+        "vigencia_ate": "2034-11-19",
+        "procedencia": {
+          "deposito": {
+            "fonte": "inpi_consulta",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "codigo": "IPAS158",
+        "texto": "Registro em vigor",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "inpi_consulta"
+      },
+      "vigilancia": {
+        "ativa": true,
+        "elegivel": true,
+        "motivos": [],
+        "fonte_feed": "rpi_xml",
+        "atualizado_em": "2026-09-01",
+        "proxima_verificacao": "2026-09-08"
+      },
+      "pendencias": [],
+      "fonte": "inpi_consulta",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT022",
+      "especie": "marca",
+      "jurisdicao": "BR",
+      "identificadores": [
+        {
+          "tipo": "inpi_marca",
+          "valor_bruto": "942551199",
+          "valor_normalizado": "942551199",
+          "jurisdicao": "BR",
+          "papel": "pedido",
+          "desde": "2025-05-22",
+          "fonte": "inpi_consulta"
+        }
+      ],
+      "marca": {
+        "nome": "BERTOLDI AUTOPEÇAS",
+        "nome_normalizado": "BERTOLDI AUTOPEÇAS",
+        "apresentacao": "mista",
+        "natureza": "produto",
+        "classes": [
+          {
+            "codigo": "35",
+            "edicao_ncl": "Ncl(12)",
+            "especificacao_bruta": "Comércio de peças e acessórios para veículos"
+          }
+        ]
+      },
+      "datas": {
+        "deposito": "2025-05-22",
+        "concessao": null,
+        "vigencia_ate": null,
+        "procedencia": {
+          "deposito": {
+            "fonte": "inpi_consulta",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "codigo": "IPAS009",
+        "texto": "Publicado para oposição",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "inpi_consulta"
+      },
+      "vigilancia": {
+        "ativa": true,
+        "elegivel": true,
+        "motivos": [],
+        "fonte_feed": "rpi_xml",
+        "atualizado_em": "2026-09-01",
+        "proxima_verificacao": "2026-09-08"
+      },
+      "pendencias": [],
+      "fonte": "inpi_consulta",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "ativo_id": "01J9DEM00000000000000AT023",
+      "especie": "marca",
+      "jurisdicao": "BR",
+      "identificadores": [
+        {
+          "tipo": "inpi_marca",
+          "valor_bruto": "937665544",
+          "valor_normalizado": "937665544",
+          "jurisdicao": "BR",
+          "papel": "registro",
+          "desde": "2022-06-08",
+          "fonte": "inpi_consulta"
+        }
+      ],
+      "marca": {
+        "nome": "NOVACAMPO",
+        "nome_normalizado": "NOVACAMPO",
+        "apresentacao": "nominativa",
+        "natureza": "produto",
+        "classes": [
+          {
+            "codigo": "31",
+            "especificacao_bruta": "Sementes; produtos agrícolas"
+          }
+        ]
+      },
+      "datas": {
+        "deposito": "2022-06-08",
+        "concessao": null,
+        "vigencia_ate": null,
+        "procedencia": {
+          "deposito": {
+            "fonte": "inpi_consulta",
+            "observado_em": "2026-09-07T00:41:41-03:00"
+          }
+        }
+      },
+      "situacao": {
+        "texto": "Em exame",
+        "derivada_em": "2026-09-07T00:41:41-03:00",
+        "fonte": "inpi_consulta"
+      },
+      "vigilancia": {
+        "ativa": true,
+        "elegivel": true,
+        "motivos": [],
+        "fonte_feed": "rpi_xml",
+        "atualizado_em": "2026-09-01",
+        "proxima_verificacao": "2026-09-08"
+      },
+      "pendencias": [
+        {
+          "tipo": "titular_anonimo",
+          "detalhe": "o card do CRM aponta para o agente pagante; o titular real não foi identificado"
+        }
+      ],
+      "fonte": "inpi_consulta",
+      "externo": {},
+      "criado_em": "2026-09-07T00:41:41-03:00",
+      "atualizado_em": "2026-09-07T00:41:41-03:00"
+    }
+  ],
+  "vinculos": [
+    {
+      "vinculo_id": "01J9DEM00000000000000VN001",
+      "ativo_id": "01J9DEM00000000000000AT001",
+      "pessoa_id": "01J9DEM00000000000000PJ001",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "decisao_humana",
+      "decidido_por": "marcio",
+      "confianca": "confirmado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN002",
+      "ativo_id": "01J9DEM00000000000000AT001",
+      "pessoa_id": "01J9DEM00000000000000PJ001",
+      "papel": "cliente",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN003",
+      "ativo_id": "01J9DEM00000000000000AT001",
+      "pessoa_id": "01J9DEM00000000000000PR017",
+      "papel": "procurador",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN004",
+      "ativo_id": "01J9DEM00000000000000AT002",
+      "pessoa_id": "01J9DEM00000000000000PJ001",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN005",
+      "ativo_id": "01J9DEM00000000000000AT002",
+      "pessoa_id": "01J9DEM00000000000000AG013",
+      "papel": "agente",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": false
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN006",
+      "ativo_id": "01J9DEM00000000000000AT003",
+      "pessoa_id": "01J9DEM00000000000000PJ001",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN007",
+      "ativo_id": "01J9DEM00000000000000AT004",
+      "pessoa_id": "01J9DEM00000000000000PJ001",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN008",
+      "ativo_id": "01J9DEM00000000000000AT004",
+      "pessoa_id": "01J9DEM00000000000000AG016",
+      "papel": "agente",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": false
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN009",
+      "ativo_id": "01J9DEM00000000000000AT005",
+      "pessoa_id": "01J9DEM00000000000000PJ001",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "decisao_humana",
+      "decidido_por": "gui",
+      "confianca": "confirmado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN010",
+      "ativo_id": "01J9DEM00000000000000AT005",
+      "pessoa_id": "01J9DEM00000000000000PF010",
+      "papel": "cotitular",
+      "escopo": "ativo",
+      "ordem": 2,
+      "fonte": "decisao_humana",
+      "decidido_por": "gui",
+      "confianca": "confirmado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN011",
+      "ativo_id": "01J9DEM00000000000000AT005",
+      "pessoa_id": "01J9DEM00000000000000PR017",
+      "papel": "procurador",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN012",
+      "ativo_id": "01J9DEM00000000000000AT006",
+      "pessoa_id": "01J9DEM00000000000000PJ001",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN013",
+      "ativo_id": "01J9DEM00000000000000AT007",
+      "pessoa_id": "01J9DEM00000000000000PJ001",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN014",
+      "ativo_id": "01J9DEM00000000000000AT001",
+      "pessoa_id": "01J9DEM00000000000000CT011",
+      "papel": "contato",
+      "escopo": "servico",
+      "servico_id": "01J9DEM00000000000000SV001",
+      "fonte": "ploomes",
+      "confianca": "confirmado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN015",
+      "ativo_id": "01J9DEM00000000000000AT005",
+      "pessoa_id": "01J9DEM00000000000000CT011",
+      "papel": "contato",
+      "escopo": "servico",
+      "servico_id": "01J9DEM00000000000000SV002",
+      "fonte": "ploomes",
+      "confianca": "confirmado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN016",
+      "ativo_id": "01J9DEM00000000000000AT005",
+      "pessoa_id": "01J9DEM00000000000000CT011",
+      "papel": "contato",
+      "escopo": "servico",
+      "servico_id": "01J9DEM00000000000000SV003",
+      "fonte": "ploomes",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN017",
+      "ativo_id": "01J9DEM00000000000000AT008",
+      "pessoa_id": "01J9DEM00000000000000PJ002",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "decisao_humana",
+      "decidido_por": "marcio",
+      "confianca": "confirmado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN018",
+      "ativo_id": "01J9DEM00000000000000AT008",
+      "pessoa_id": "01J9DEM00000000000000PJ002",
+      "papel": "cliente",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN019",
+      "ativo_id": "01J9DEM00000000000000AT008",
+      "pessoa_id": "01J9DEM00000000000000PR017",
+      "papel": "procurador",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN020",
+      "ativo_id": "01J9DEM00000000000000AT009",
+      "pessoa_id": "01J9DEM00000000000000PJ002",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN021",
+      "ativo_id": "01J9DEM00000000000000AT010",
+      "pessoa_id": "01J9DEM00000000000000PJ002",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN022",
+      "ativo_id": "01J9DEM00000000000000AT010",
+      "pessoa_id": "01J9DEM00000000000000AG015",
+      "papel": "agente",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": false
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN023",
+      "ativo_id": "01J9DEM00000000000000AT011",
+      "pessoa_id": "01J9DEM00000000000000PJ002",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN024",
+      "ativo_id": "01J9DEM00000000000000AT012",
+      "pessoa_id": "01J9DEM00000000000000PJ002",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN025",
+      "ativo_id": "01J9DEM00000000000000AT008",
+      "pessoa_id": "01J9DEM00000000000000CT012",
+      "papel": "contato",
+      "escopo": "servico",
+      "servico_id": "01J9DEM00000000000000SV005",
+      "fonte": "ploomes",
+      "confianca": "confirmado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN026",
+      "ativo_id": "01J9DEM00000000000000AT008",
+      "pessoa_id": "01J9DEM00000000000000CT012",
+      "papel": "contato",
+      "escopo": "servico",
+      "servico_id": "01J9DEM00000000000000SV006",
+      "fonte": "ploomes",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN027",
+      "ativo_id": "01J9DEM00000000000000AT013",
+      "pessoa_id": "01J9DEM00000000000000PJ003",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "decisao_humana",
+      "decidido_por": "marcio",
+      "confianca": "confirmado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN028",
+      "ativo_id": "01J9DEM00000000000000AT013",
+      "pessoa_id": "01J9DEM00000000000000PJ003",
+      "papel": "cliente",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN029",
+      "ativo_id": "01J9DEM00000000000000AT014",
+      "pessoa_id": "01J9DEM00000000000000PJ003",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN030",
+      "ativo_id": "01J9DEM00000000000000AT015",
+      "pessoa_id": "01J9DEM00000000000000PJ003",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN031",
+      "ativo_id": "01J9DEM00000000000000AT016",
+      "pessoa_id": "01J9DEM00000000000000PJ004",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "decisao_humana",
+      "decidido_por": "gui",
+      "confianca": "confirmado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN032",
+      "ativo_id": "01J9DEM00000000000000AT016",
+      "pessoa_id": "01J9DEM00000000000000PR017",
+      "papel": "procurador",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN033",
+      "ativo_id": "01J9DEM00000000000000AT017",
+      "pessoa_id": "01J9DEM00000000000000PJ004",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN034",
+      "ativo_id": "01J9DEM00000000000000AT018",
+      "pessoa_id": "01J9DEM00000000000000PJ004",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN035",
+      "ativo_id": "01J9DEM00000000000000AT018",
+      "pessoa_id": "01J9DEM00000000000000AG014",
+      "papel": "agente",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": false
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN036",
+      "ativo_id": "01J9DEM00000000000000AT019",
+      "pessoa_id": "01J9DEM00000000000000PJ005",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN037",
+      "ativo_id": "01J9DEM00000000000000AT019",
+      "pessoa_id": "01J9DEM00000000000000PJ005",
+      "papel": "cliente",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN038",
+      "ativo_id": "01J9DEM00000000000000AT020",
+      "pessoa_id": "01J9DEM00000000000000PF006",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN039",
+      "ativo_id": "01J9DEM00000000000000AT020",
+      "pessoa_id": "01J9DEM00000000000000PF006",
+      "papel": "cliente",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN040",
+      "ativo_id": "01J9DEM00000000000000AT021",
+      "pessoa_id": "01J9DEM00000000000000CF008",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "decisao_humana",
+      "decidido_por": "marcio",
+      "confianca": "manual",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN041",
+      "ativo_id": "01J9DEM00000000000000AT021",
+      "pessoa_id": "01J9DEM00000000000000PA007",
+      "papel": "cliente",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "confirmado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN042",
+      "ativo_id": "01J9DEM00000000000000AT021",
+      "pessoa_id": "01J9DEM00000000000000PA007",
+      "papel": "parceiro",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "confirmado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN043",
+      "ativo_id": "01J9DEM00000000000000AT021",
+      "pessoa_id": "01J9DEM00000000000000PR017",
+      "papel": "procurador",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN044",
+      "ativo_id": "01J9DEM00000000000000AT021",
+      "pessoa_id": "01J9DEM00000000000000PA007",
+      "papel": "contato",
+      "escopo": "servico",
+      "servico_id": "01J9DEM00000000000000SV011",
+      "fonte": "ploomes",
+      "confianca": "confirmado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN045",
+      "ativo_id": "01J9DEM00000000000000AT022",
+      "pessoa_id": "01J9DEM00000000000000CF009",
+      "papel": "titular",
+      "escopo": "ativo",
+      "ordem": 1,
+      "fonte": "decisao_humana",
+      "decidido_por": "marcio",
+      "confianca": "manual",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN046",
+      "ativo_id": "01J9DEM00000000000000AT022",
+      "pessoa_id": "01J9DEM00000000000000PA007",
+      "papel": "cliente",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN047",
+      "ativo_id": "01J9DEM00000000000000AT022",
+      "pessoa_id": "01J9DEM00000000000000PA007",
+      "papel": "parceiro",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    },
+    {
+      "vinculo_id": "01J9DEM00000000000000VN048",
+      "ativo_id": "01J9DEM00000000000000AT023",
+      "pessoa_id": "01J9DEM00000000000000PA007",
+      "papel": "cliente",
+      "escopo": "ativo",
+      "fonte": "inpi_consulta",
+      "confianca": "derivado",
+      "publicavel": true
+    }
+  ],
+  "eventos": [
+    {
+      "evento_id": "ev_3CYCEHK79PCHD",
+      "ativo_id": "01J9DEM00000000000000AT001",
+      "tipo": "despacho",
+      "codigo": "IPAS158",
+      "titulo": "Concessão de registro",
+      "ocorrido_em": "2024-05-14",
+      "publicacao": {
+        "tipo": "marcas",
+        "revista": 2784,
+        "data": "2024-05-14",
+        "pagina": 4120
+      },
+      "observacoes": [
+        {
+          "fonte": "rpi_xml",
+          "observado_em": "2026-09-07T00:41:41-03:00",
+          "documento_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "visivel_ao_cliente": true
+    },
+    {
+      "evento_id": "ev_AAKT3SZA6DKA1",
+      "ativo_id": "01J9DEM00000000000000AT005",
+      "tipo": "despacho",
+      "codigo": "6.1",
+      "titulo": "Exigência Técnica - Art. 36 da LPI",
+      "texto": "Reformular o quadro reivindicatório conforme parecer técnico.",
+      "ocorrido_em": "2026-09-01",
+      "publicacao": {
+        "tipo": "patentes",
+        "revista": 2904,
+        "data": "2026-09-01",
+        "pagina": 812
+      },
+      "observacoes": [
+        {
+          "fonte": "rpi_xml",
+          "observado_em": "2026-09-07T00:41:41-03:00",
+          "documento_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "visivel_ao_cliente": true
+    },
+    {
+      "evento_id": "ev_51A26VH2JB7CN",
+      "ativo_id": "01J9DEM00000000000000AT005",
+      "tipo": "despacho",
+      "codigo": "3.1",
+      "titulo": "Pedido de Patente Publicado",
+      "ocorrido_em": "2025-01-07",
+      "publicacao": {
+        "tipo": "patentes",
+        "revista": 2818,
+        "data": "2025-01-07",
+        "pagina": 240
+      },
+      "observacoes": [
+        {
+          "fonte": "rpi_xml",
+          "observado_em": "2026-09-07T00:41:41-03:00",
+          "documento_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "visivel_ao_cliente": true
+    },
+    {
+      "evento_id": "ev_BP5XR1SKH12ZZ",
+      "ativo_id": "01J9DEM00000000000000AT006",
+      "tipo": "despacho",
+      "codigo": "2.1",
+      "titulo": "Pedido de Modelo de Utilidade Depositado",
+      "ocorrido_em": "2024-05-07",
+      "publicacao": {
+        "tipo": "patentes",
+        "revista": 2782,
+        "data": "2024-05-07"
+      },
+      "observacoes": [
+        {
+          "fonte": "rpi_xml",
+          "observado_em": "2026-09-07T00:41:41-03:00",
+          "documento_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "visivel_ao_cliente": true
+    },
+    {
+      "evento_id": "ev_2719JHN5MGR1F",
+      "ativo_id": "01J9DEM00000000000000AT008",
+      "tipo": "despacho",
+      "codigo": "IPAS158",
+      "titulo": "Concessão de registro",
+      "ocorrido_em": "2023-08-15",
+      "publicacao": {
+        "tipo": "marcas",
+        "revista": 2745,
+        "data": "2023-08-15",
+        "pagina": 2210
+      },
+      "observacoes": [
+        {
+          "fonte": "rpi_xml",
+          "observado_em": "2026-09-07T00:41:41-03:00",
+          "documento_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "visivel_ao_cliente": true
+    },
+    {
+      "evento_id": "ev_50TVAD66Q5HY6",
+      "ativo_id": "01J9DEM00000000000000AT013",
+      "tipo": "despacho",
+      "codigo": "IPAS158",
+      "titulo": "Concessão de registro",
+      "ocorrido_em": "2025-02-11",
+      "publicacao": {
+        "tipo": "marcas",
+        "revista": 2822,
+        "data": "2025-02-11",
+        "pagina": 5510
+      },
+      "observacoes": [
+        {
+          "fonte": "rpi_xml",
+          "observado_em": "2026-09-07T00:41:41-03:00",
+          "documento_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "visivel_ao_cliente": true
+    },
+    {
+      "evento_id": "ev_C0FV22W9C49K9",
+      "ativo_id": "01J9DEM00000000000000AT016",
+      "tipo": "despacho",
+      "codigo": "9.1",
+      "titulo": "Deferimento - Art. 38 da LPI e Resolução 72/2013",
+      "ocorrido_em": "2026-08-26",
+      "publicacao": {
+        "tipo": "patentes",
+        "revista": 2903,
+        "data": "2026-08-26",
+        "pagina": 1044
+      },
+      "observacoes": [
+        {
+          "fonte": "rpi_xml",
+          "observado_em": "2026-09-07T00:41:41-03:00",
+          "documento_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "visivel_ao_cliente": true
+    },
+    {
+      "evento_id": "ev_47PVA6R42GHNC",
+      "ativo_id": "01J9DEM00000000000000AT019",
+      "tipo": "despacho",
+      "codigo": "IPAS009",
+      "titulo": "Publicação de pedido de registro para oposição",
+      "ocorrido_em": "2026-08-17",
+      "publicacao": {
+        "tipo": "marcas",
+        "revista": 2901,
+        "data": "2026-08-17",
+        "pagina": 3320
+      },
+      "observacoes": [
+        {
+          "fonte": "rpi_xml",
+          "observado_em": "2026-09-07T00:41:41-03:00",
+          "documento_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "visivel_ao_cliente": true
+    },
+    {
+      "evento_id": "ev_DF4QX0CVNDHQJ",
+      "ativo_id": "01J9DEM00000000000000AT020",
+      "tipo": "despacho",
+      "codigo": "16.1",
+      "titulo": "Concessão de Patente ou Certificado de Adição",
+      "ocorrido_em": "2025-09-16",
+      "publicacao": {
+        "tipo": "patentes",
+        "revista": 2853,
+        "data": "2025-09-16"
+      },
+      "observacoes": [
+        {
+          "fonte": "rpi_xml",
+          "observado_em": "2026-09-07T00:41:41-03:00",
+          "documento_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "visivel_ao_cliente": true
+    },
+    {
+      "evento_id": "ev_FTVZHM64CGDME",
+      "ativo_id": "01J9DEM00000000000000AT022",
+      "tipo": "despacho",
+      "codigo": "IPAS009",
+      "titulo": "Publicação de pedido de registro para oposição",
+      "ocorrido_em": "2026-09-02",
+      "publicacao": {
+        "tipo": "marcas",
+        "revista": 2903,
+        "data": "2026-09-02",
+        "pagina": 6612
+      },
+      "observacoes": [
+        {
+          "fonte": "rpi_xml",
+          "observado_em": "2026-09-07T00:41:41-03:00",
+          "documento_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "visivel_ao_cliente": true
+    },
+    {
+      "evento_id": "ev_NTAKNTERNA00",
+      "ativo_id": "01J9DEM00000000000000AT021",
+      "tipo": "nota_interna",
+      "titulo": "Confirmar com o parceiro quem responde pelo cliente final antes de liberar o acesso",
+      "ocorrido_em": "2026-09-07",
+      "observacoes": [
+        {
+          "fonte": "decisao_humana",
+          "observado_em": "2026-09-07T00:41:41-03:00",
+          "autor": "gui"
+        }
+      ],
+      "visivel_ao_cliente": false
+    }
+  ],
+  "prazos": [
+    {
+      "prazo_id": "01J9DEM00000000000000PZ001",
+      "ativo_id": "01J9DEM00000000000000AT001",
+      "evento_base": "ev_3CYCEHK79PCHD",
+      "regua": {
+        "id": "br.marca.prorrogacao",
+        "nome": "Prorrogação decenal do registro de marca",
+        "fundamento": "art. 133 LPI — REGRA NÃO CONFIRMADA PELA CASA",
+        "dias": 0,
+        "contagem": "corridos",
+        "dies_a_quo": "primeiro_dia_util_seguinte",
+        "ajuste_dia_nao_util": "proximo_dia_util",
+        "calendario": "br_inpi",
+        "prazo_extraordinario": {
+          "dias": 180,
+          "fundamento": "art. 133 §1º LPI",
+          "taxa_adicional": true
+        },
+        "firmeza_padrao": "estimado",
+        "gatilhos": [],
+        "observacao": "⚠️ A base normalizada já traz `vigencyEnd` e `renewalStart/End`. Para os ativos SEM data, a régua não existe escrita — e há 91 dias entre a concessão e a publicação da concessão no exemplo medido. Pergunta aberta §3."
+      },
+      "abre_em": "2033-05-14",
+      "vence_em": "2034-05-14",
+      "vence_extraordinario_em": "2034-11-10",
+      "firmeza": "estimado",
+      "fonte": "inpi_consulta"
+    },
+    {
+      "prazo_id": "01J9DEM00000000000000PZ002",
+      "ativo_id": "01J9DEM00000000000000AT005",
+      "evento_base": "ev_AAKT3SZA6DKA1",
+      "regua": {
+        "id": "br.patente.exigencia_tecnica",
+        "nome": "Manifestação a exigência técnica",
+        "fundamento": "art. 36 LPI",
+        "dias": 90,
+        "contagem": "corridos",
+        "dies_a_quo": "primeiro_dia_util_seguinte",
+        "ajuste_dia_nao_util": "proximo_dia_util",
+        "calendario": "br_inpi",
+        "firmeza_padrao": "legal",
+        "gatilhos": [
+          "6.1",
+          "6.23"
+        ],
+        "observacao": "Medido: 90 dias em 38 de 63; 60 em 15; 30 em 5 (há variação por tipo de exigência)."
+      },
+      "vence_em": "2026-11-30",
+      "prazo_interno_em": "2026-11-20",
+      "firmeza": "legal",
+      "fonte": "inpi_consulta"
+    },
+    {
+      "prazo_id": "01J9DEM00000000000000PZ003",
+      "ativo_id": "01J9DEM00000000000000AT005",
+      "evento_base": "sem-evento-base",
+      "regua": {
+        "id": "br.patente.anuidade",
+        "nome": "Anuidade",
+        "fundamento": "art. 84 LPI — REGRA NÃO CONFIRMADA PELA CASA",
+        "dias": 0,
+        "contagem": "corridos",
+        "dies_a_quo": "primeiro_dia_util_seguinte",
+        "ajuste_dia_nao_util": "proximo_dia_util",
+        "calendario": "br_inpi",
+        "prazo_extraordinario": {
+          "dias": 180,
+          "fundamento": "art. 84 §2º LPI",
+          "taxa_adicional": true
+        },
+        "firmeza_padrao": "estimado",
+        "gatilhos": [],
+        "observacao": "⚠️ A GRU tem PELO MENOS 6 códigos de anuidade (220 · 224 · 226 · 228 · 240) e o extraordinário muda o código (221 · 225). Tratar \"anuidade\" como código único emite a guia errada. A casa opera 710 cards de anuidade. Pergunta aberta §3."
+      },
+      "vence_em": "2026-09-21",
+      "vence_extraordinario_em": "2027-03-20",
+      "firmeza": "estimado",
+      "fonte": "inpi_consulta"
+    },
+    {
+      "prazo_id": "01J9DEM00000000000000PZ004",
+      "ativo_id": "01J9DEM00000000000000AT006",
+      "evento_base": "sem-evento-base",
+      "regua": {
+        "id": "br.patente.anuidade",
+        "nome": "Anuidade",
+        "fundamento": "art. 84 LPI — REGRA NÃO CONFIRMADA PELA CASA",
+        "dias": 0,
+        "contagem": "corridos",
+        "dies_a_quo": "primeiro_dia_util_seguinte",
+        "ajuste_dia_nao_util": "proximo_dia_util",
+        "calendario": "br_inpi",
+        "prazo_extraordinario": {
+          "dias": 180,
+          "fundamento": "art. 84 §2º LPI",
+          "taxa_adicional": true
+        },
+        "firmeza_padrao": "estimado",
+        "gatilhos": [],
+        "observacao": "⚠️ A GRU tem PELO MENOS 6 códigos de anuidade (220 · 224 · 226 · 228 · 240) e o extraordinário muda o código (221 · 225). Tratar \"anuidade\" como código único emite a guia errada. A casa opera 710 cards de anuidade. Pergunta aberta §3."
+      },
+      "vence_em": "2027-01-07",
+      "vence_extraordinario_em": "2027-07-06",
+      "firmeza": "estimado",
+      "fonte": "inpi_consulta"
+    },
+    {
+      "prazo_id": "01J9DEM00000000000000PZ005",
+      "ativo_id": "01J9DEM00000000000000AT008",
+      "evento_base": "ev_2719JHN5MGR1F",
+      "regua": {
+        "id": "br.marca.prorrogacao",
+        "nome": "Prorrogação decenal do registro de marca",
+        "fundamento": "art. 133 LPI — REGRA NÃO CONFIRMADA PELA CASA",
+        "dias": 0,
+        "contagem": "corridos",
+        "dies_a_quo": "primeiro_dia_util_seguinte",
+        "ajuste_dia_nao_util": "proximo_dia_util",
+        "calendario": "br_inpi",
+        "prazo_extraordinario": {
+          "dias": 180,
+          "fundamento": "art. 133 §1º LPI",
+          "taxa_adicional": true
+        },
+        "firmeza_padrao": "estimado",
+        "gatilhos": [],
+        "observacao": "⚠️ A base normalizada já traz `vigencyEnd` e `renewalStart/End`. Para os ativos SEM data, a régua não existe escrita — e há 91 dias entre a concessão e a publicação da concessão no exemplo medido. Pergunta aberta §3."
+      },
+      "abre_em": "2032-08-15",
+      "vence_em": "2033-08-15",
+      "vence_extraordinario_em": "2034-02-11",
+      "firmeza": "estimado",
+      "fonte": "inpi_consulta"
+    },
+    {
+      "prazo_id": "01J9DEM00000000000000PZ006",
+      "ativo_id": "01J9DEM00000000000000AT013",
+      "evento_base": "ev_50TVAD66Q5HY6",
+      "regua": {
+        "id": "br.marca.prorrogacao",
+        "nome": "Prorrogação decenal do registro de marca",
+        "fundamento": "art. 133 LPI — REGRA NÃO CONFIRMADA PELA CASA",
+        "dias": 0,
+        "contagem": "corridos",
+        "dies_a_quo": "primeiro_dia_util_seguinte",
+        "ajuste_dia_nao_util": "proximo_dia_util",
+        "calendario": "br_inpi",
+        "prazo_extraordinario": {
+          "dias": 180,
+          "fundamento": "art. 133 §1º LPI",
+          "taxa_adicional": true
+        },
+        "firmeza_padrao": "estimado",
+        "gatilhos": [],
+        "observacao": "⚠️ A base normalizada já traz `vigencyEnd` e `renewalStart/End`. Para os ativos SEM data, a régua não existe escrita — e há 91 dias entre a concessão e a publicação da concessão no exemplo medido. Pergunta aberta §3."
+      },
+      "abre_em": "2034-02-11",
+      "vence_em": "2035-02-11",
+      "vence_extraordinario_em": "2035-08-10",
+      "firmeza": "estimado",
+      "fonte": "inpi_consulta"
+    },
+    {
+      "prazo_id": "01J9DEM00000000000000PZ007",
+      "ativo_id": "01J9DEM00000000000000AT016",
+      "evento_base": "ev_C0FV22W9C49K9",
+      "regua": {
+        "id": "br.patente.exigencia_tecnica",
+        "nome": "Manifestação a exigência técnica",
+        "fundamento": "art. 36 LPI",
+        "dias": 90,
+        "contagem": "corridos",
+        "dies_a_quo": "primeiro_dia_util_seguinte",
+        "ajuste_dia_nao_util": "proximo_dia_util",
+        "calendario": "br_inpi",
+        "firmeza_padrao": "legal",
+        "gatilhos": [
+          "6.1",
+          "6.23"
+        ],
+        "observacao": "Medido: 90 dias em 38 de 63; 60 em 15; 30 em 5 (há variação por tipo de exigência)."
+      },
+      "vence_em": "2026-09-12",
+      "prazo_interno_em": "2026-09-02",
+      "firmeza": "praticado",
+      "fonte": "inpi_consulta"
+    },
+    {
+      "prazo_id": "01J9DEM00000000000000PZ008",
+      "ativo_id": "01J9DEM00000000000000AT016",
+      "evento_base": "sem-evento-base",
+      "regua": {
+        "id": "br.patente.anuidade",
+        "nome": "Anuidade",
+        "fundamento": "art. 84 LPI — REGRA NÃO CONFIRMADA PELA CASA",
+        "dias": 0,
+        "contagem": "corridos",
+        "dies_a_quo": "primeiro_dia_util_seguinte",
+        "ajuste_dia_nao_util": "proximo_dia_util",
+        "calendario": "br_inpi",
+        "prazo_extraordinario": {
+          "dias": 180,
+          "fundamento": "art. 84 §2º LPI",
+          "taxa_adicional": true
+        },
+        "firmeza_padrao": "estimado",
+        "gatilhos": [],
+        "observacao": "⚠️ A GRU tem PELO MENOS 6 códigos de anuidade (220 · 224 · 226 · 228 · 240) e o extraordinário muda o código (221 · 225). Tratar \"anuidade\" como código único emite a guia errada. A casa opera 710 cards de anuidade. Pergunta aberta §3."
+      },
+      "vence_em": "2026-11-07",
+      "vence_extraordinario_em": "2027-05-06",
+      "firmeza": "estimado",
+      "fonte": "inpi_consulta"
+    },
+    {
+      "prazo_id": "01J9DEM00000000000000PZ009",
+      "ativo_id": "01J9DEM00000000000000AT019",
+      "evento_base": "ev_47PVA6R42GHNC",
+      "regua": {
+        "id": "br.marca.prazo_oposicao",
+        "nome": "Prazo para oposição a pedido de terceiro",
+        "fundamento": "art. 158 LPI — da publicação do pedido para oposição",
+        "dias": 60,
+        "contagem": "corridos",
+        "dies_a_quo": "primeiro_dia_util_seguinte",
+        "ajuste_dia_nao_util": "proximo_dia_util",
+        "calendario": "br_inpi",
+        "firmeza_padrao": "legal",
+        "gatilhos": [
+          "IPAS009",
+          "I009",
+          "IPAS421",
+          "I421",
+          "IPAS756",
+          "I756",
+          "IPAS757",
+          "I757"
+        ],
+        "observacao": "É o relógio da colidência. I756/I757 são designações de Madri."
+      },
+      "vence_em": "2026-10-16",
+      "prazo_interno_em": "2026-10-06",
+      "firmeza": "legal",
+      "fonte": "inpi_consulta"
+    },
+    {
+      "prazo_id": "01J9DEM00000000000000PZ010",
+      "ativo_id": "01J9DEM00000000000000AT020",
+      "evento_base": "sem-evento-base",
+      "regua": {
+        "id": "br.patente.anuidade",
+        "nome": "Anuidade",
+        "fundamento": "art. 84 LPI — REGRA NÃO CONFIRMADA PELA CASA",
+        "dias": 0,
+        "contagem": "corridos",
+        "dies_a_quo": "primeiro_dia_util_seguinte",
+        "ajuste_dia_nao_util": "proximo_dia_util",
+        "calendario": "br_inpi",
+        "prazo_extraordinario": {
+          "dias": 180,
+          "fundamento": "art. 84 §2º LPI",
+          "taxa_adicional": true
+        },
+        "firmeza_padrao": "estimado",
+        "gatilhos": [],
+        "observacao": "⚠️ A GRU tem PELO MENOS 6 códigos de anuidade (220 · 224 · 226 · 228 · 240) e o extraordinário muda o código (221 · 225). Tratar \"anuidade\" como código único emite a guia errada. A casa opera 710 cards de anuidade. Pergunta aberta §3."
+      },
+      "vence_em": "2026-10-04",
+      "vence_extraordinario_em": "2027-04-02",
+      "firmeza": "estimado",
+      "fonte": "inpi_consulta"
+    },
+    {
+      "prazo_id": "01J9DEM00000000000000PZ011",
+      "ativo_id": "01J9DEM00000000000000AT022",
+      "evento_base": "ev_FTVZHM64CGDME",
+      "regua": {
+        "id": "br.marca.prazo_oposicao",
+        "nome": "Prazo para oposição a pedido de terceiro",
+        "fundamento": "art. 158 LPI — da publicação do pedido para oposição",
+        "dias": 60,
+        "contagem": "corridos",
+        "dies_a_quo": "primeiro_dia_util_seguinte",
+        "ajuste_dia_nao_util": "proximo_dia_util",
+        "calendario": "br_inpi",
+        "firmeza_padrao": "legal",
+        "gatilhos": [
+          "IPAS009",
+          "I009",
+          "IPAS421",
+          "I421",
+          "IPAS756",
+          "I756",
+          "IPAS757",
+          "I757"
+        ],
+        "observacao": "É o relógio da colidência. I756/I757 são designações de Madri."
+      },
+      "vence_em": "2026-11-01",
+      "prazo_interno_em": "2026-10-22",
+      "firmeza": "legal",
+      "fonte": "inpi_consulta"
+    },
+    {
+      "prazo_id": "01J9DEM00000000000000PZ012",
+      "ativo_id": "01J9DEM00000000000000AT008",
+      "evento_base": "ev_2719JHN5MGR1F",
+      "regua": {
+        "id": "br.marca.prazo_oposicao",
+        "nome": "Prazo para oposição a pedido de terceiro",
+        "fundamento": "art. 158 LPI — da publicação do pedido para oposição",
+        "dias": 60,
+        "contagem": "corridos",
+        "dies_a_quo": "primeiro_dia_util_seguinte",
+        "ajuste_dia_nao_util": "proximo_dia_util",
+        "calendario": "br_inpi",
+        "firmeza_padrao": "legal",
+        "gatilhos": [
+          "IPAS009",
+          "I009",
+          "IPAS421",
+          "I421",
+          "IPAS756",
+          "I756",
+          "IPAS757",
+          "I757"
+        ],
+        "observacao": "É o relógio da colidência. I756/I757 são designações de Madri."
+      },
+      "vence_em": "2026-10-31",
+      "prazo_interno_em": "2026-10-21",
+      "firmeza": "legal",
+      "fonte": "inpi_consulta"
+    },
+    {
+      "prazo_id": "01J9DEM00000000000000PZ013",
+      "ativo_id": "01J9DEM00000000000000AT013",
+      "evento_base": "ev_50TVAD66Q5HY6",
+      "regua": {
+        "id": "br.marca.prazo_oposicao",
+        "nome": "Prazo para oposição a pedido de terceiro",
+        "fundamento": "art. 158 LPI — da publicação do pedido para oposição",
+        "dias": 60,
+        "contagem": "corridos",
+        "dies_a_quo": "primeiro_dia_util_seguinte",
+        "ajuste_dia_nao_util": "proximo_dia_util",
+        "calendario": "br_inpi",
+        "firmeza_padrao": "legal",
+        "gatilhos": [
+          "IPAS009",
+          "I009",
+          "IPAS421",
+          "I421",
+          "IPAS756",
+          "I756",
+          "IPAS757",
+          "I757"
+        ],
+        "observacao": "É o relógio da colidência. I756/I757 são designações de Madri."
+      },
+      "vence_em": "2026-09-15",
+      "prazo_interno_em": "2026-09-09",
+      "firmeza": "legal",
+      "fonte": "inpi_consulta"
+    },
+    {
+      "prazo_id": "01J9DEM00000000000000PZ014",
+      "ativo_id": "01J9DEM00000000000000AT001",
+      "evento_base": "ev_3CYCEHK79PCHD",
+      "regua": {
+        "id": "br.marca.prazo_oposicao",
+        "nome": "Prazo para oposição a pedido de terceiro",
+        "fundamento": "art. 158 LPI — da publicação do pedido para oposição",
+        "dias": 60,
+        "contagem": "corridos",
+        "dies_a_quo": "primeiro_dia_util_seguinte",
+        "ajuste_dia_nao_util": "proximo_dia_util",
+        "calendario": "br_inpi",
+        "firmeza_padrao": "legal",
+        "gatilhos": [
+          "IPAS009",
+          "I009",
+          "IPAS421",
+          "I421",
+          "IPAS756",
+          "I756",
+          "IPAS757",
+          "I757"
+        ],
+        "observacao": "É o relógio da colidência. I756/I757 são designações de Madri."
+      },
+      "vence_em": "2026-09-29",
+      "prazo_interno_em": "2026-09-19",
+      "firmeza": "legal",
+      "fonte": "inpi_consulta"
+    }
+  ],
+  "documentos": [
+    {
+      "documento_id": "01J9DEM00000000000000DK001",
+      "ativo_id": "01J9DEM00000000000000AT001",
+      "tipo": "certificado",
+      "nome": "Certificado de Registro de Marca - 934567890.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 289792,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000001",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100001"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK002",
+      "ativo_id": "01J9DEM00000000000000AT001",
+      "tipo": "procuracao",
+      "nome": "Procuração - Hidrovale Bombas e Válvulas Ltda.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 98304,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000002",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100002"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK003",
+      "ativo_id": "01J9DEM00000000000000AT005",
+      "tipo": "recibo_protocolo",
+      "nome": "Recibo de protocolo - Depósito BR 102023012345-6.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 144384,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000003",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100003"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK004",
+      "ativo_id": "01J9DEM00000000000000AT005",
+      "tipo": "peticao",
+      "nome": "Relatório descritivo e reivindicações.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 892928,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000004",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100004"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK005",
+      "ativo_id": "01J9DEM00000000000000AT005",
+      "tipo": "comprovante_gru",
+      "nome": "Comprovante GRU 220 - 3ª anuidade.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 65536,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000005",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100005"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK006",
+      "ativo_id": "01J9DEM00000000000000AT002",
+      "tipo": "carta_agente",
+      "nome": "Nordlicht - invoice and cover letter.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 120832,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000006",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100006"
+      },
+      "publicavel": false,
+      "idioma": "en",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK007",
+      "pessoa_id": "01J9DEM00000000000000PJ001",
+      "tipo": "contrato",
+      "nome": "Contrato de prestação de serviços - Hidrovale (assinado).pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 215040,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000007",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100007"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK008",
+      "ativo_id": "01J9DEM00000000000000AT008",
+      "tipo": "certificado",
+      "nome": "Certificado de Registro de Marca - 928776554.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 297984,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000008",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100008"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK009",
+      "ativo_id": "01J9DEM00000000000000AT008",
+      "tipo": "procuracao",
+      "nome": "Procuração - Terrafé Alimentos S.A.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 90112,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000009",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100009"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK010",
+      "ativo_id": "01J9DEM00000000000000AT009",
+      "tipo": "certificado",
+      "nome": "WIPO - Certificate of International Registration 1734501.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 411648,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000010",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100010"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "en",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK011",
+      "ativo_id": "01J9DEM00000000000000AT008",
+      "tipo": "relatorio_colidencia",
+      "nome": "Apex_RPI_2904_Risco_Alto_TERRAFE_928776554_x_TERRA_FE_CAFE_946110022_PT.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 89088,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000011",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100011"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK012",
+      "ativo_id": "01J9DEM00000000000000AT013",
+      "tipo": "certificado",
+      "nome": "Certificado de Registro de Marca - 941002233.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 282624,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000012",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100012"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK013",
+      "ativo_id": "01J9DEM00000000000000AT013",
+      "tipo": "procuracao",
+      "nome": "Procuração - Vitrana Cosméticos Ltda.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 93184,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000013",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100013"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK014",
+      "ativo_id": "01J9DEM00000000000000AT014",
+      "tipo": "certificado",
+      "nome": "Certificado de Registro de DI - BR302024004455-8.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 2938880,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000014",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100014"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK015",
+      "ativo_id": "01J9DEM00000000000000AT016",
+      "tipo": "peticao",
+      "nome": "Relatório descritivo - hidrólise enzimática.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 1269760,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000015",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100015"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK016",
+      "ativo_id": "01J9DEM00000000000000AT016",
+      "tipo": "procuracao",
+      "nome": "Procuração - Nordeste Bioenergia S.A.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 96256,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000016",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100016"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK017",
+      "ativo_id": "01J9DEM00000000000000AT019",
+      "tipo": "procuracao",
+      "nome": "Procuração - Studio Kaba Arquitetura Ltda.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 89088,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000017",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100017"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK018",
+      "ativo_id": "01J9DEM00000000000000AT020",
+      "tipo": "certificado",
+      "nome": "Carta-patente MU - BR202023006611-4.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 524288,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000018",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100018"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK019",
+      "ativo_id": "01J9DEM00000000000000AT021",
+      "tipo": "certificado",
+      "nome": "Certificado de Registro de Marca - 939887766.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 274432,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000019",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100019"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "documento_id": "01J9DEM00000000000000DK020",
+      "ativo_id": "01J9DEM00000000000000AT021",
+      "tipo": "procuracao",
+      "nome": "Procuração - Padaria Estrela do Vale ME.pdf",
+      "mime": "application/pdf",
+      "tamanho_bytes": 86016,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000020",
+      "origem": {
+        "sistema": "ploomes",
+        "ref": "attachment:501100020"
+      },
+      "publicavel": true,
+      "publicavel_por": "gui",
+      "publicavel_em": "2026-09-06",
+      "idioma": "pt",
+      "fonte": "upload_manual",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    }
+  ],
+  "servicos": [
+    {
+      "servico_id": "01J9DEM00000000000000SV001",
+      "ativo_ids": [
+        "01J9DEM00000000000000AT001"
+      ],
+      "origem": {
+        "sistema": "ploomes",
+        "deal_id": 503100001,
+        "funil_id": 10015007,
+        "titulo_bruto": "Deferimento de Registro de Marca - GRU 372 - HIDROVALE - 934567890"
+      },
+      "tipo": "Deferimento de registro de marca",
+      "papel_na_conta": "avulso",
+      "materia": [
+        "Marcas"
+      ],
+      "paises": [
+        "BR"
+      ],
+      "estado": "concluido",
+      "datas": {
+        "abertura": "2024-03-01",
+        "conclusao": "2024-05-20"
+      },
+      "responsavel": "wivyanne",
+      "valor": {
+        "moeda": "BRL",
+        "total": 1250,
+        "honorario": 890,
+        "taxa_oficial": 360,
+        "origem": "nota_fiscal"
+      },
+      "fonte": "ploomes",
+      "observado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "servico_id": "01J9DEM00000000000000SV002",
+      "ativo_ids": [
+        "01J9DEM00000000000000AT005"
+      ],
+      "origem": {
+        "sistema": "ploomes",
+        "deal_id": 503100002,
+        "funil_id": 10015007,
+        "titulo_bruto": "Pagamento da 3ª Anuidade - (GRU 220) BR 102023012345-6"
+      },
+      "tipo": "Pagamento da 3ª anuidade",
+      "papel_na_conta": "avulso",
+      "materia": [
+        "Patentes"
+      ],
+      "paises": [
+        "BR"
+      ],
+      "estado": "concluido",
+      "datas": {
+        "abertura": "2026-07-01",
+        "conclusao": "2026-07-09"
+      },
+      "responsavel": "wivyanne",
+      "valor": {
+        "moeda": "BRL",
+        "total": 400,
+        "honorario": 205,
+        "taxa_oficial": 195,
+        "origem": "nota_fiscal"
+      },
+      "fonte": "ploomes",
+      "observado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "servico_id": "01J9DEM00000000000000SV003",
+      "ativo_ids": [
+        "01J9DEM00000000000000AT005"
+      ],
+      "origem": {
+        "sistema": "ploomes",
+        "deal_id": 503100003,
+        "funil_id": 10015007,
+        "titulo_bruto": "Manifestação a Exigência Técnica - Art. 36 - BR 102023012345-6"
+      },
+      "tipo": "Manifestação a exigência técnica",
+      "papel_na_conta": "avulso",
+      "materia": [
+        "Patentes"
+      ],
+      "paises": [
+        "BR"
+      ],
+      "estado": "em_andamento",
+      "datas": {
+        "abertura": "2026-09-02"
+      },
+      "responsavel": "wivyanne",
+      "valor": {
+        "moeda": "BRL",
+        "total": 3800,
+        "honorario": 3800,
+        "taxa_oficial": 0,
+        "origem": "cobranca"
+      },
+      "fonte": "ploomes",
+      "observado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "servico_id": "01J9DEM00000000000000SV004",
+      "ativo_ids": [
+        "01J9DEM00000000000000AT002",
+        "01J9DEM00000000000000AT003"
+      ],
+      "origem": {
+        "sistema": "ploomes",
+        "deal_id": 503100004,
+        "funil_id": 10015007,
+        "titulo_bruto": "Depósito de Marca no Exterior - HIDROVALE - União Europeia e Estados Unidos"
+      },
+      "tipo": "Depósito no exterior",
+      "papel_na_conta": "proposta",
+      "materia": [
+        "Marcas"
+      ],
+      "paises": [
+        "EM",
+        "US"
+      ],
+      "estado": "concluido",
+      "datas": {
+        "abertura": "2024-09-10",
+        "conclusao": "2025-02-14"
+      },
+      "responsavel": "wivyanne",
+      "valor": {
+        "moeda": "BRL",
+        "total": 18400,
+        "honorario": 7400,
+        "taxa_internacional": 11000,
+        "origem": "nota_fiscal"
+      },
+      "fonte": "ploomes",
+      "observado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "servico_id": "01J9DEM00000000000000SV005",
+      "ativo_ids": [
+        "01J9DEM00000000000000AT009",
+        "01J9DEM00000000000000AT010",
+        "01J9DEM00000000000000AT011",
+        "01J9DEM00000000000000AT012"
+      ],
+      "origem": {
+        "sistema": "ploomes",
+        "deal_id": 503100005,
+        "funil_id": 10015007,
+        "titulo_bruto": "Protocolo de Madri - TERRAFÉ - 4 designações"
+      },
+      "tipo": "Registro internacional via Protocolo de Madri",
+      "papel_na_conta": "proposta",
+      "materia": [
+        "Marcas"
+      ],
+      "paises": [
+        "WO",
+        "AR",
+        "MX",
+        "PT"
+      ],
+      "estado": "concluido",
+      "datas": {
+        "abertura": "2024-01-08",
+        "conclusao": "2024-08-14"
+      },
+      "responsavel": "wivyanne",
+      "valor": {
+        "moeda": "BRL",
+        "total": 27600,
+        "honorario": 9600,
+        "taxa_internacional": 18000,
+        "origem": "nota_fiscal"
+      },
+      "fonte": "ploomes",
+      "observado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "servico_id": "01J9DEM00000000000000SV006",
+      "ativo_ids": [
+        "01J9DEM00000000000000AT008"
+      ],
+      "origem": {
+        "sistema": "ploomes",
+        "deal_id": 503100006,
+        "funil_id": 10015007,
+        "titulo_bruto": "Oposição - GRU 332 - TERRAFÉ vs TERRA FÉ CAFÉ - 946110022"
+      },
+      "tipo": "Oposição a pedido de terceiro",
+      "papel_na_conta": "avulso",
+      "materia": [
+        "Marcas"
+      ],
+      "paises": [
+        "BR"
+      ],
+      "estado": "em_andamento",
+      "datas": {
+        "abertura": "2026-09-03"
+      },
+      "responsavel": "wivyanne",
+      "valor": {
+        "moeda": "BRL",
+        "total": 4200,
+        "honorario": 4200,
+        "taxa_oficial": 0,
+        "origem": "cobranca"
+      },
+      "fonte": "ploomes",
+      "observado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "servico_id": "01J9DEM00000000000000SV007",
+      "ativo_ids": [
+        "01J9DEM00000000000000AT013"
+      ],
+      "origem": {
+        "sistema": "ploomes",
+        "deal_id": 503100007,
+        "funil_id": 10015007,
+        "titulo_bruto": "Pedido de Registro de Marca - GRU 389 - VITRANA - Classe 03"
+      },
+      "tipo": "Registro de marca",
+      "papel_na_conta": "avulso",
+      "materia": [
+        "Marcas"
+      ],
+      "paises": [
+        "BR"
+      ],
+      "estado": "concluido",
+      "datas": {
+        "abertura": "2023-04-10",
+        "conclusao": "2025-02-20"
+      },
+      "responsavel": "wivyanne",
+      "valor": {
+        "moeda": "BRL",
+        "total": 2100,
+        "honorario": 1355,
+        "taxa_oficial": 745,
+        "origem": "nota_fiscal"
+      },
+      "fonte": "ploomes",
+      "observado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "servico_id": "01J9DEM00000000000000SV008",
+      "ativo_ids": [
+        "01J9DEM00000000000000AT015"
+      ],
+      "origem": {
+        "sistema": "ploomes",
+        "deal_id": 503100008,
+        "funil_id": 10015007,
+        "titulo_bruto": "Pedido de Registro de Marca - VITRANA BOTANICS - Classe 03 - Mista"
+      },
+      "tipo": "Registro de marca",
+      "papel_na_conta": "avulso",
+      "materia": [
+        "Marcas"
+      ],
+      "paises": [
+        "BR"
+      ],
+      "estado": "em_andamento",
+      "datas": {
+        "abertura": "2026-08-25"
+      },
+      "responsavel": "wivyanne",
+      "valor": {
+        "moeda": "BRL",
+        "total": 2400,
+        "honorario": 2400,
+        "taxa_oficial": 0,
+        "origem": "cobranca"
+      },
+      "fonte": "ploomes",
+      "observado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "servico_id": "01J9DEM00000000000000SV009",
+      "ativo_ids": [
+        "01J9DEM00000000000000AT016",
+        "01J9DEM00000000000000AT017"
+      ],
+      "origem": {
+        "sistema": "ploomes",
+        "deal_id": 503100009,
+        "funil_id": 10015007,
+        "titulo_bruto": "Depósito PCT + fase nacional Japão - Nordeste Bioenergia"
+      },
+      "tipo": "Depósito PCT e fases nacionais",
+      "papel_na_conta": "proposta",
+      "materia": [
+        "Patentes"
+      ],
+      "paises": [
+        "WO",
+        "JP"
+      ],
+      "estado": "concluido",
+      "datas": {
+        "abertura": "2023-02-01",
+        "conclusao": "2024-10-02"
+      },
+      "responsavel": "wivyanne",
+      "valor": {
+        "moeda": "BRL",
+        "total": 41800,
+        "origem": "nota_fiscal"
+      },
+      "fonte": "ploomes",
+      "observado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "servico_id": "01J9DEM00000000000000SV010",
+      "ativo_ids": [
+        "01J9DEM00000000000000AT019"
+      ],
+      "origem": {
+        "sistema": "ploomes",
+        "deal_id": 503100010,
+        "funil_id": 10015007,
+        "titulo_bruto": "Pedido de Registro de Marca - STUDIO KABA - Classe 42"
+      },
+      "tipo": "Registro de marca",
+      "papel_na_conta": "avulso",
+      "materia": [
+        "Marcas"
+      ],
+      "paises": [
+        "BR"
+      ],
+      "estado": "em_andamento",
+      "datas": {
+        "abertura": "2025-09-30"
+      },
+      "responsavel": "wivyanne",
+      "valor": {
+        "moeda": "BRL",
+        "total": 1980,
+        "origem": "cobranca"
+      },
+      "fonte": "ploomes",
+      "observado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "servico_id": "01J9DEM00000000000000SV011",
+      "ativo_ids": [
+        "01J9DEM00000000000000AT021"
+      ],
+      "origem": {
+        "sistema": "ploomes",
+        "deal_id": 503100011,
+        "funil_id": 10015007,
+        "titulo_bruto": "Pedido de Registro de Marca - ESTRELA DO VALE - Classe 30"
+      },
+      "tipo": "Registro de marca",
+      "papel_na_conta": "avulso",
+      "materia": [
+        "Marcas"
+      ],
+      "paises": [
+        "BR"
+      ],
+      "estado": "concluido",
+      "datas": {
+        "abertura": "2022-11-20",
+        "conclusao": "2024-12-02"
+      },
+      "responsavel": "wivyanne",
+      "valor": {
+        "moeda": "BRL",
+        "total": 1750,
+        "origem": "nota_fiscal"
+      },
+      "fonte": "ploomes",
+      "observado_em": "2026-09-07T00:41:41-03:00"
+    }
+  ],
+  "colidencias": [
+    {
+      "colidencia_id": "01J9DEM00000000000000CD001",
+      "caso_id": "C01",
+      "revisao": 1,
+      "ativo_id": "01J9DEM00000000000000AT008",
+      "terceiro": {
+        "processo": "946110022",
+        "marca": "TERRA FÉ CAFÉ",
+        "titular": "Cafeeira Vale Verde Ltda",
+        "pais": "BR",
+        "uf": "MG",
+        "classes": [
+          {
+            "codigo": "30",
+            "edicao_ncl": "Ncl(12)",
+            "especificacao_bruta": "Café; café solúvel; bebidas à base de café"
+          }
+        ],
+        "apresentacao": "nominativa",
+        "natureza": "produto",
+        "deposito": "2026-05-19"
+      },
+      "evento_gatilho": {
+        "revista": 2904,
+        "data": "2026-09-01",
+        "codigo": "IPAS009",
+        "pagina": 7731
+      },
+      "medida": "oposicao",
+      "scores": {
+        "nominativo": 96.3,
+        "fonetico": 100,
+        "classe": 100,
+        "especificacao": 78.4,
+        "combinado": 94.12
+      },
+      "tier": "P0",
+      "risk_level": "alto",
+      "confidence": "alta",
+      "analysis_status": "complete",
+      "actionability": "open",
+      "recommend_send_to_client": true,
+      "triagem": {
+        "elementos_comuns": "núcleo TERRA FÉ integralmente reproduzido; mesma classe 30; produtos idênticos (café)",
+        "elementos_distintivos": "acréscimo do termo descritivo CAFÉ, que não afasta a colidência",
+        "especificacoes_colidentes": "café; café torrado e moído × café; café solúvel; bebidas à base de café",
+        "analise": "Reprodução integral do conjunto distintivo com acréscimo de elemento descritivo. Mesma classe e identidade de produto.",
+        "fundamento": "art. 124, XIX, LPI; Manual de Marcas 5.11.3 (reprodução com acréscimo)"
+      },
+      "dimensoes": [
+        {
+          "dimensao": "Sinal",
+          "avaliacao": "Reprodução integral",
+          "fundamento": "O conjunto TERRA FÉ aparece inteiro, sem alteração."
+        },
+        {
+          "dimensao": "Som",
+          "avaliacao": "Identica na leitura",
+          "fundamento": "A pronúncia do núcleo não se distingue; o acréscimo é lido como descrição."
+        },
+        {
+          "dimensao": "Classe",
+          "avaliacao": "A mesma — 30",
+          "fundamento": "Ambos em NCL(12) classe 30."
+        },
+        {
+          "dimensao": "Produto",
+          "avaliacao": "Café contra café",
+          "fundamento": "A especificação do terceiro cobre o mesmo produto do seu registro."
+        },
+        {
+          "dimensao": "Anterioridade",
+          "avaliacao": "Favorável a você",
+          "fundamento": "Seu depósito é de 2021; o do terceiro, de 2026."
+        }
+      ],
+      "parecer": {
+        "por": "marcio",
+        "em": "2026-09-03",
+        "risco": "alto",
+        "decisao": "enviar",
+        "justificativa": "Reprodução integral do núcleo com acréscimo descritivo, em classe e produto idênticos. Anterioridade favorável: 2021 contra 2026.",
+        "hash_conteudo": "h1"
+      },
+      "approval_status": "approved",
+      "prazo_id": "01J9DEM00000000000000PZ012",
+      "relatorio": {
+        "documento_id": "01J9DEM00000000000000DK004",
+        "id_documento": "APEX-RPI2904-928776554-946110022-PT"
+      },
+      "fonte": "decisao_humana",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "colidencia_id": "01J9DEM00000000000000CD002",
+      "caso_id": "C02",
+      "revisao": 1,
+      "ativo_id": "01J9DEM00000000000000AT013",
+      "terceiro": {
+        "processo": "946223311",
+        "marca": "VITRANNA",
+        "titular": "Belle Nature Indústria de Cosméticos Ltda",
+        "pais": "BR",
+        "uf": "SP",
+        "classes": [
+          {
+            "codigo": "03",
+            "edicao_ncl": "Ncl(12)",
+            "especificacao_bruta": "Perfumaria; óleos essenciais; cosméticos capilares"
+          }
+        ],
+        "apresentacao": "nominativa",
+        "natureza": "produto",
+        "deposito": "2026-04-02"
+      },
+      "evento_gatilho": {
+        "revista": 2904,
+        "data": "2026-09-01",
+        "codigo": "IPAS009",
+        "pagina": 6108
+      },
+      "medida": "oposicao",
+      "scores": {
+        "nominativo": 92.31,
+        "fonetico": 95,
+        "classe": 100,
+        "especificacao": 54.7,
+        "combinado": 87.66
+      },
+      "tier": "P0",
+      "risk_level": "medio",
+      "confidence": "alta",
+      "analysis_status": "complete",
+      "actionability": "open",
+      "recommend_send_to_client": true,
+      "triagem": {
+        "elementos_comuns": "sequência VITRAN quase integral; mesma classe 03",
+        "elementos_distintivos": "duplo N e terminação -A; apresentação nominativa em ambos",
+        "especificacoes_colidentes": "cosméticos; cremes para a pele × cosméticos capilares; perfumaria",
+        "analise": "Proximidade nominativa e fonética elevadas. A afinidade de especificação é parcial: perfumaria e cosmético capilar não se sobrepõem integralmente aos cremes de pele.",
+        "fundamento": "art. 124, XIX, LPI"
+      },
+      "dimensoes": [
+        {
+          "dimensao": "Sinal",
+          "avaliacao": "Muito próximo",
+          "fundamento": "A sequência VITRAN se repete; muda a terminação."
+        },
+        {
+          "dimensao": "Som",
+          "avaliacao": "Quase indistinguível",
+          "fundamento": "O duplo N não muda a pronúncia corrente."
+        },
+        {
+          "dimensao": "Classe",
+          "avaliacao": "A mesma — 03",
+          "fundamento": "Ambos em NCL(12) classe 03."
+        },
+        {
+          "dimensao": "Produto",
+          "avaliacao": "Cruza em parte",
+          "fundamento": "Perfumaria e capilar não cobrem os cremes de pele do seu registro."
+        }
+      ],
+      "parecer": {
+        "por": "marcio",
+        "em": "2026-09-04",
+        "risco": "medio",
+        "decisao": "enviar",
+        "justificativa": "Sinais muito próximos, mas a especificação só se cruza parcialmente. Recomenda-se acompanhar e decidir com o titular.",
+        "hash_conteudo": "h2"
+      },
+      "approval_status": "approved",
+      "prazo_id": "01J9DEM00000000000000PZ013",
+      "relatorio": {
+        "documento_id": "01J9DEM00000000000000DK004",
+        "id_documento": "APEX-RPI2904-941002233-946223311-PT"
+      },
+      "fonte": "decisao_humana",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "colidencia_id": "01J9DEM00000000000000CD003",
+      "caso_id": "C03",
+      "revisao": 1,
+      "ativo_id": "01J9DEM00000000000000AT001",
+      "terceiro": {
+        "processo": "946331100",
+        "marca": "HIDROVALLE",
+        "titular": "Hidrovalle Equipamentos Industriais Ltda",
+        "pais": "BR",
+        "uf": "SP",
+        "classes": [
+          {
+            "codigo": "07",
+            "edicao_ncl": "Ncl(12)",
+            "especificacao_bruta": "Bombas centrífugas; válvulas de retenção"
+          }
+        ],
+        "apresentacao": "nominativa",
+        "natureza": "produto",
+        "deposito": "2026-06-02"
+      },
+      "evento_gatilho": {
+        "revista": 2904,
+        "data": "2026-09-01",
+        "codigo": "IPAS009",
+        "pagina": 7104
+      },
+      "medida": "oposicao",
+      "scores": {
+        "nominativo": 94.44,
+        "fonetico": 100,
+        "classe": 100,
+        "especificacao": 71.3,
+        "combinado": 92.06
+      },
+      "tier": "P0",
+      "risk_level": "alto",
+      "confidence": "alta",
+      "analysis_status": "complete",
+      "actionability": "open",
+      "recommend_send_to_client": true,
+      "triagem": {
+        "elementos_comuns": "núcleo HIDROVAL; classe 07; bombas e válvulas",
+        "elementos_distintivos": "duplo L e terminação -E",
+        "especificacoes_colidentes": "bombas hidráulicas × bombas centrífugas; válvulas",
+        "analise": "Reprodução com acréscimo mínimo; mesma classe e afinidade direta de produto.",
+        "fundamento": "art. 124, XIX, LPI"
+      },
+      "dimensoes": [
+        {
+          "dimensao": "Sinal",
+          "avaliacao": "Quase reprodução",
+          "fundamento": "O núcleo HIDROVAL aparece inteiro; muda só a terminação."
+        },
+        {
+          "dimensao": "Som",
+          "avaliacao": "Idêntica na fala",
+          "fundamento": "O duplo L não altera a pronúncia corrente."
+        },
+        {
+          "dimensao": "Classe",
+          "avaliacao": "A mesma — 07",
+          "fundamento": "Ambos em NCL(12) classe 07."
+        },
+        {
+          "dimensao": "Produto",
+          "avaliacao": "Bombas contra bombas",
+          "fundamento": "A especificação do terceiro cobre o mesmo produto do seu registro."
+        },
+        {
+          "dimensao": "Anterioridade",
+          "avaliacao": "Favorável a você",
+          "fundamento": "Seu depósito é de 2022; o do terceiro, de 2026."
+        }
+      ],
+      "parecer": {
+        "por": "marcio",
+        "em": "2026-09-05",
+        "risco": "alto",
+        "decisao": "enviar",
+        "justificativa": "Reprodução do núcleo com acréscimo mínimo, mesma classe e afinidade direta de produto. Anterioridade favorável: 2022 contra 2026.",
+        "hash_conteudo": "h3"
+      },
+      "approval_status": "approved",
+      "prazo_id": "01J9DEM00000000000000PZ014",
+      "relatorio": {
+        "documento_id": "01J9DEM00000000000000DK004",
+        "id_documento": "APEX-RPI2904-934567890-946331100-PT"
+      },
+      "fonte": "decisao_humana",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    },
+    {
+      "colidencia_id": "01J9DEM00000000000000CD004",
+      "caso_id": "C04",
+      "revisao": 1,
+      "ativo_id": "01J9DEM00000000000000AT019",
+      "terceiro": {
+        "processo": "946447722",
+        "marca": "KABBA",
+        "titular": "Kabba Tecnologia Ltda",
+        "pais": "BR",
+        "uf": "SP",
+        "classes": [
+          {
+            "codigo": "09",
+            "edicao_ncl": "Ncl(12)",
+            "especificacao_bruta": "Aplicativos de computador para gestão financeira"
+          }
+        ],
+        "apresentacao": "nominativa",
+        "natureza": "produto",
+        "deposito": "2026-05-30"
+      },
+      "evento_gatilho": {
+        "revista": 2904,
+        "data": "2026-09-01",
+        "codigo": "IPAS009",
+        "pagina": 4402
+      },
+      "medida": "oposicao",
+      "scores": {
+        "nominativo": 90.91,
+        "fonetico": 100,
+        "classe": 88,
+        "especificacao": 0,
+        "combinado": 76.6
+      },
+      "tier": "P2",
+      "analysis_status": "incomplete",
+      "actionability": "open",
+      "recommend_send_to_client": false,
+      "triagem": {
+        "elementos_comuns": "núcleo KAB; fonética praticamente idêntica",
+        "elementos_distintivos": "duplo B; classes 42 (arquitetura) × 09 (software)",
+        "especificacoes_colidentes": "nenhuma sobreposição encontrada entre serviços de arquitetura e aplicativos de gestão financeira",
+        "analise": "Semelhança do sinal é alta, mas a afinidade 42/09 foi apenas heurística de classe. As especificações e os mercados documentados não se cruzam.",
+        "fundamento": "a especificação tem veto sobre o score combinado",
+        "pendencia": "confirmar se há intenção de expansão do titular para software"
+      },
+      "approval_status": "pending",
+      "fonte": "rpi_xml",
+      "criado_em": "2026-09-07T00:41:41-03:00"
+    }
+  ]
+}

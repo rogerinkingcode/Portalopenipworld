@@ -1,0 +1,287 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://apexip.com/schemas/rpi2899-high-risk-client-report.schema.json",
+  "title": "Apex RPI 2899 - caso de risco alto para PDF ao cliente",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["cases"],
+  "properties": {
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/case"
+      }
+    }
+  },
+  "$defs": {
+    "party": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mark",
+        "process_number",
+        "owner",
+        "country_code",
+        "filing_date",
+        "status",
+        "presentation",
+        "nature",
+        "classes",
+        "relevant_scope",
+        "image_path"
+      ],
+      "properties": {
+        "mark": {"type": "string", "minLength": 1, "maxLength": 180},
+        "process_number": {"type": ["string", "integer"]},
+        "owner": {"type": "string", "minLength": 1, "maxLength": 240},
+        "country_code": {
+          "type": "string",
+          "pattern": "^[A-Za-z]{2}$"
+        },
+        "filing_date": {"type": "string", "format": "date"},
+        "priority_date": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "status": {"type": "string", "minLength": 1, "maxLength": 180},
+        "presentation": {"type": "string", "minLength": 1, "maxLength": 80},
+        "nature": {"type": "string", "minLength": 1, "maxLength": 100},
+        "classes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1, "maxLength": 50}
+        },
+        "relevant_scope": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 850
+        },
+        "collision_highlights": {
+          "type": "array",
+          "maxItems": 12,
+          "uniqueItems": true,
+          "description": "Trechos exatos de relevant_scope que devem receber destaque visual por representarem as especificações colidentes.",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          }
+        },
+        "image_path": {
+          "type": ["string", "null"]
+        },
+        "image_caption": {
+          "type": ["string", "null"],
+          "maxLength": 180
+        },
+        "related_rights": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {"type": "string", "minLength": 1, "maxLength": 280}
+        },
+        "rpi_page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "dispatch_code": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "dispatch_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 220
+        }
+      }
+    },
+    "dimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "assessment", "rationale"],
+      "properties": {
+        "label": {"type": "string", "minLength": 1, "maxLength": 80},
+        "assessment": {"type": "string", "minLength": 1, "maxLength": 70},
+        "rationale": {"type": "string", "minLength": 1, "maxLength": 420}
+      }
+    },
+    "case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "case_id",
+        "report_date",
+        "risk_level",
+        "language",
+        "measure",
+        "generation_gate",
+        "rpi",
+        "deadlines",
+        "client",
+        "third_party",
+        "analysis",
+        "legal",
+        "narrative"
+      ],
+      "properties": {
+        "schema_version": {"enum": ["1.0", "1.1"]},
+        "case_id": {"type": "string", "minLength": 1, "maxLength": 120},
+        "report_date": {"type": "string", "format": "date"},
+        "risk_level": {
+          "enum": ["alto", "ALTO", "high", "HIGH"]
+        },
+        "language": {
+          "enum": ["auto", "pt-BR", "en"]
+        },
+        "measure": {
+          "enum": ["opposition", "oposicao", "oposição"]
+        },
+        "generation_gate": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "analysis_completed_by_apex",
+            "event_verified",
+            "deadline_confirmed",
+            "blocking_flags_resolved",
+            "remaining_flags"
+          ],
+          "properties": {
+            "analysis_completed_by_apex": {"const": true},
+            "event_verified": {"const": true},
+            "deadline_confirmed": {"const": true},
+            "blocking_flags_resolved": {"const": true},
+            "remaining_flags": {
+              "type": "array",
+              "maxItems": 0
+            }
+          }
+        },
+        "rpi": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "number",
+            "publication_date",
+            "page",
+            "dispatch_code",
+            "dispatch_name"
+          ],
+          "properties": {
+            "number": {"const": 2899},
+            "publication_date": {"const": "2026-07-28"},
+            "page": {"type": "integer", "minimum": 1},
+            "dispatch_code": {"type": "string", "minLength": 1, "maxLength": 40},
+            "dispatch_name": {"type": "string", "minLength": 1, "maxLength": 220}
+          }
+        },
+        "deadlines": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["opposition", "internal_instruction"],
+          "properties": {
+            "opposition": {"const": "2026-09-28"},
+            "internal_instruction": {"const": "2026-09-18"}
+          }
+        },
+        "client": {"$ref": "#/$defs/party"},
+        "third_party": {"$ref": "#/$defs/party"},
+        "additional_third_parties": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {"$ref": "#/$defs/party"}
+        },
+        "analysis": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["dimensions", "points", "conclusion", "confidence"],
+          "properties": {
+            "dimensions": {
+              "type": "array",
+              "minItems": 4,
+              "maxItems": 7,
+              "items": {"$ref": "#/$defs/dimension"}
+            },
+            "points": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 4,
+              "items": {"type": "string", "minLength": 1, "maxLength": 820}
+            },
+            "conclusion": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1000
+            },
+            "confidence": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            }
+          }
+        },
+        "legal": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["articles", "case_specific_notes"],
+          "properties": {
+            "articles": {
+              "type": "array",
+              "minItems": 3,
+              "contains": {"const": "124, XIX"}
+            },
+            "case_specific_notes": {
+              "type": "array",
+              "maxItems": 3,
+              "items": {"type": "string", "minLength": 1, "maxLength": 700}
+            }
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "maxItems": 8,
+          "items": {"type": "string", "minLength": 1, "maxLength": 600}
+        },
+        "limitations": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {"type": "string", "minLength": 1, "maxLength": 600}
+        },
+        "narrative": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "recipient_salutation",
+            "intro",
+            "recommendation",
+            "action_request"
+          ],
+          "properties": {
+            "recipient_salutation": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 180
+            },
+            "intro": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1200
+            },
+            "recommendation": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1100
+            },
+            "action_request": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1000
+            }
+          }
+        }
+      }
+    }
+  }
+}

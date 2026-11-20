@@ -1,0 +1,16 @@
+# Normaliza a quebra de linha no repositório (LF), deixando o checkout local
+# a cargo do core.autocrlf de cada máquina. Sem isto, o repo nasce no Windows
+# com CRLF e o dev em Linux/macOS vê 124 arquivos "modificados" no primeiro
+# clone, sem ter tocado em nada.
+* text=auto eol=lf
+
+# Binários: nunca converter.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+*.pdf binary

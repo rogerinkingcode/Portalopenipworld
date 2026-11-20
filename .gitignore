@@ -1,0 +1,129 @@
+# ============================================================
+#  OpenIpWorld (IPAW / IPWALLET) · .gitignore
+#  Nasceu ANTES do primeiro commit. Conferir `git status` sempre.
+# ============================================================
+
+# --- Node / Next ---
+node_modules/
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+next-env.d.ts
+.turbo/
+.vercel/
+coverage/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# --- Ambiente e segredos (NUNCA) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.pfx
+*.p12
+*api-key*
+*api_key*
+*-secret*
+*credentials*
+*token*.txt
+
+# --- Ferramentas de IA / IDE / SO ---
+.claude/
+.codex/
+.cursor/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# --- DADO REAL — nunca entra (só dados-exemplo/ fictícios) ---
+dados/
+dados-reais/
+uploads/
+*.xlsx
+*.xlsm
+*.xls
+*.csv
+# Sem exceção: o modelo de planilha é gerado pela API (GET /importacao/planilha/modelo),
+# não mora mais no repositório.
+*.msg
+*.eml
+# ⚠️ Allowlist, nao negacao ampla: arquivo novo em dados-exemplo/ e ignorado por padrao e
+#    so entra se alguem escrever a excecao com o nome exato. E a unica forma que nao se
+#    fura por descuido — e esta pasta e justamente a que vai receber base de dados.
+dados-exemplo/*
+!dados-exemplo/portfolio.exemplo.json
+# XML/ZIP da RPI baixados para teste local
+*.zip
+RM*.xml
+P*.xml
+Patente_*.xml
+Marcas*.pdf
+Patentes*.pdf
+# relatórios e PDFs reais
+Apex_RPI_*.pdf
+Relatorio_*.xlsm
+# bancos locais
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Excecoes: referencias de dominio que DEVEM ir no repo ---
+# Skills do Codex (especificacao), snapshots de codigo, logos e Poppins com licenca OFL.
+#
+# ⚠️ A negacao era `!referencias/**` e DESARMAVA as regras de segredo acima dentro desta
+#    pasta: um `referencias/api-key.txt` teria entrado no commit. Negacao ampla nunca —
+#    so os tres diretorios que de fato precisam entrar, e o bloco-trava do fim reafirma
+#    segredo e dado real DEPOIS de toda excecao.
+!referencias/codex-colidencias/assets/apex/**
+!referencias/codex-colidencias/referencias_codigo/**
+!referencias/codex-colidencias/skills/**
+
+# --- Backups e temporários ---
+*.bak
+*.bak-*
+*.tmp
+*.orig
+*~
+tsconfig.tsbuildinfo
+
+# ============================================================
+#  BLOCO-TRAVA — reafirma o proibido DEPOIS de toda excecao.
+#  Em .gitignore vale a ULTIMA regra que casa: sem este bloco,
+#  qualquer `!alguma-coisa/**` acima desarma tudo o que veio antes.
+# ============================================================
+**/.env
+**/.env.*
+!**/.env.example
+**/*.pem
+**/*.key
+**/*.crt
+**/*.pfx
+**/*.p12
+**/*api-key*
+**/*api_key*
+**/*-secret*
+**/*credentials*
+**/*token*.txt
+**/.codex/
+**/.claude/
+
+# Dado real por FORMATO, nao por prefixo de nome — PDF, DOCX, JSONL e XML
+# de cliente passavam batido porque a regra antiga olhava o nome do arquivo.
+*.pdf
+*.docx
+*.doc
+*.jsonl
+*.xml
+*.txt
+!referencias/codex-colidencias/assets/apex/fonts/OFL.txt
